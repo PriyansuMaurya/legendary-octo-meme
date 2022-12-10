@@ -1,22 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+
+        <div>
+          🔨
+        </div> 
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        Under Construction
         </p>
-        <a
-          className="App-link"
-          href="https://aliabdaal.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          I m Ali
-        </a>
+    
       </header>
     </div>
   );
