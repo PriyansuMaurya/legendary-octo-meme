@@ -1,14 +1,10 @@
 .App {
   text-align: center;
 }
-.App-header{
 
-  font-family: "IM Fell French Canon SC";
-
-}
 *{
   font-family: "IM Fell French Canon SC";
-
+ 
 }
 .under-construction {
   margin-top: 0px;
@@ -117,3 +113,97 @@ li a {
   color: blue;
 }
 
+.footer-logo{
+  height: 50px;
+  width: 50px;
+  margin-inline: 10px;
+}
+
+.pimage-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: "center";
+  visibility: "inherit";
+  z-index: 20;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pimage-slider {
+  width: 1000px;
+  height: 600px;
+  background: url("https://gladisandco.com/wp-content/uploads/2018/12/t9.jpg");
+  background-size: cover;
+  margin:10px;
+  animation: slide 10s infinite;
+}
+
+@keyframes slide {
+  25% {
+      background: url("https://gladisandco.com/wp-content/uploads/2022/03/Westwood-1-scaled.jpg");
+      background-size: cover;
+  }
+/* 
+  50% {
+      background: url(../images/4.jpg);
+      background-size: cover;
+  }
+
+  75% {
+
+      background: url(../images/4.jpg);
+      background-size: cover;
+  }
+
+ 100% {
+      background: url(../images/4.jpg);
+      background-size: cover;
+  } */
+
+}
+
+
+.et-hero-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 0.8rem;
+
+}
+.et-hero-tab:hover {
+  color:white;
+  background: rgba(102,177,241,0.8);
+  transition: all 0.5s ease;
+}
+.et-hero-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: #66B1F1;
+  transition: left 0.3s ease;
+}
+
+.et-slide{
+  background-color: #eeeeee;
+
+}
+h1 {
+  font-size: 3rem;
+  background-color: #eeeeee;
+}
+h3 {
+  font-size: 1rem;
+  background-color: #eeeeee;
+
+}
+.et-hero-tab {
+  font-size: 1rem;
+}
