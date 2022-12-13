@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import Intro from "./components/Intro";
 import Header from "./components/Header";
 // import ContactMe from './components/ContactMe';
@@ -12,15 +12,8 @@ function App() {
   return (
     <div className="App">
       <Header setBg={setBg} />
-
-      <section className="et-slide" id="Home">
-        <h1>Home</h1>
-        <div className="under-construction" style={{ backgroundColor: bg }}>
-        <Intro />
-        🔨
-        <p>Under Construction</p>
-      </div>
-      </section>
+      <Intro  bg = {bg}/>
+   
       <section class="et-slide" id="About">
         <h1>About</h1>
         <h3>something about </h3>
