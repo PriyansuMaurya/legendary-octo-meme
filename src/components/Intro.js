@@ -7,9 +7,11 @@ function Intro(props) {
       <div className="intro-container">
         <div className="about" style={{ backgroundColor: props.bg }}>
           <h1>#Home</h1>
-          <Greeting />
+          <Greeting classN="greeting" />
+          <div className="under-construction">
           🔨
           <p>Under Construction</p>
+          </div>
         </div>
       </div>
     </section>

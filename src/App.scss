@@ -29,6 +29,16 @@
     h1 {
       font-size: 5rem;
       margin-right: 20px;
+      text-align: right;
+      margin-bottom: 0px;
+    }
+    .greeting {
+      margin-top: 0px;
+      text-align: right;
+      font-size: 60px;
+    }
+    .under-construction {
+      text-align: center;
     }
   }
 }
@@ -136,7 +146,7 @@ ul {
 
 .pimage-container {
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,20 +155,87 @@ ul {
   z-index: 20;
   display: flex;
   justify-content: flex-end;
-}
 
-.pimage-slider {
-  width: 1000px;
-  height: 600px;
-  background: url("https://gladisandco.com/wp-content/uploads/2018/12/t9.jpg");
-  background-size: cover;
-  margin: 10px;
-  animation: slide 10s infinite;
+  .item {
+    width: 30vw;
+    height: 500px;
+    background-position: center;
+    background-size: 75vh;
+    margin: 1vw;
+    // border-radius: 3vw;
+    cursor: pointer;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h2 {
+      margin-top: 0px;
+      text-align: center;
+      font-size: 30px;
+    }
+    h3 {
+      margin-top: -40px;
+      margin-left: 12px;
+    }
+    .discription {
+      margin: -48px 12px 20px 12px;
+    }
+    .btn-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+
+      button {
+        /* appearance: none; */
+        margin-top: 20px;
+        background-color: white;
+        border: 0px;
+        box-sizing: border-box;
+        padding: 16px 24px;
+        transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+        user-select: none;
+        touch-action: manipulation;
+        will-change: transform;
+        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+          7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+          4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+      }
+
+      button:disabled {
+        pointer-events: none;
+      }
+
+      button:hover {
+        color: #fff;
+        background-color: #1a1a1a;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
+      }
+
+      button:active {
+        box-shadow: none;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .pimage-slider {
+    width: 900px;
+    height: 500px;
+
+    flex: 1;
+    // border-radius: 45px;
+    background: url("https://gladisandco.com/wp-content/uploads/2018/12/t9.jpg");
+    background-size: cover;
+    margin: 10px;
+    animation: slide 10s infinite;
+  }
 }
 
 @keyframes slide {
   25% {
-   background: url("https://gladisandco.com/wp-content/uploads/2022/03/Westwood-1-scaled.jpg");
+    background: url("https://gladisandco.com/wp-content/uploads/2022/03/Westwood-1-scaled.jpg");
     background-size: cover;
   }
   /* 
@@ -195,55 +272,105 @@ ul {
 
   .logo {
     flex: 1;
-    
   }
-  .logo :hover{
+  .logo :hover {
     transform: translateY(-8px);
     transition: all 1s ease-in;
-
   }
   .resume-text {
     flex: 2;
   }
 }
 
+.header-container {
+  .et-hero-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 0.8rem;
 
-
-.et-hero-tab {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  color: #000;
-  letter-spacing: 0.1rem;
-  transition: all 0.5s ease;
-  font-size: 0.8rem;
-}
-.et-hero-tab:hover {
-  color: white;
-  background: rgba(102, 177, 241, 0.8);
-  transition: all 0.5s ease;
-}
-.et-hero-tab-slider {
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 6px;
-  background: #66b1f1;
-  transition: left 0.3s ease;
+    &:hover {
+      color: white;
+      background: rgba(102, 177, 241, 0.8);
+      transition: all 0.5s ease;
+    }
+  }
 }
 
-.et-slide {
+.slide {
   background-color: #eeeeee;
   h1 {
     font-size: 3rem;
-    background-color: #eeeeee;
-  }
-  h3 {
-    font-size: 1rem;
-    background-color: #eeeeee;
+    text-align: center;
+    // background-color: #eeeeee;
   }
 }
-.et-hero-tab {
-  font-size: 1rem;
+
+.switch {
+  width: 80px;
+  height: 4px;
+  border-radius: 27px;
+  background-image: linear-gradient(298deg, var(--red), var(--yellow));
+  position: fixed;
+  right: 50px;
+  top: 75px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  opacity: 1;
+  z-index: 33333;
+  transition: all 300ms linear;
+
+  .circle {
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(1100%);
+    left: -5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px rgba(26, 53, 71, 0.25),
+      0 0 0 1px rgba(26, 53, 71, 0.07);
+    animation: border-transform 10s linear infinite alternate forwards;
+
+    svg{
+      margin: 10px;
+      height: 20px;
+      width: 20px;
+    }
+    &:hover {
+      box-shadow: 0 8px 8px rgba(26, 53, 71, 0.25),
+        0 0 0 1px rgba(26, 53, 71, 0.07);
+    }
+
+    &::before {
+      z-index: 2;
+      font-size: 20px;
+      line-height: 40px;
+      text-align: center;
+      width: 100%;
+      height: 40px;
+      opacity: 1;
+      -webkit-transition: all 300ms linear;
+      transition: all 300ms linear;
+    }
+    &::after {
+      content: "\eb8f";
+      top: 0;
+      left: 0;
+      z-index: 2;
+      font-size: 20px;
+      line-height: 40px;
+      text-align: center;
+      width: 100%;
+      height: 40px;
+      opacity: 0;
+      -webkit-transition: all 300ms linear;
+      transition: all 300ms linear;
+    }
+  }
 }
