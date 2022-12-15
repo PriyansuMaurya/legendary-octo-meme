@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import { useState } from "react";
 import ProjectGlimpse from "./components/ProjectGlimpse";
 import "./scrollbar.css";
+import About from "./components/About";
+import Projects from "./components/Projects";
 function App() {
   const [bg, setBg] = useState("#7a90df");
 
@@ -14,12 +16,8 @@ function App() {
       <Header setBg={setBg} />
       <Intro bg={bg} />
 
-      <section className="slide" id="About">
-        <h1>About</h1>
-      </section>
-      <section className="slide" id="Projects">
-        <h1>Projects</h1>
-      </section>
+      <About/>
+      <Projects/>
 
       <section className="slide" id="Glimse">
         <h1>Glimse</h1>

@@ -1,78 +1,73 @@
-.App {
-}
-
 * {
   font-family: "IM Fell French Canon SC";
   scroll-behavior: smooth;
   scroll-padding-top: 50px;
   // transition: all 0.5s ease-in;
-
-  user-select: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-
-.intro-container {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  .about {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
-    padding: 0px 50px -10px 50px;
-    font-size: calc(30px + 2vmin);
-    color: #eee;
-    transition: all 1s ease-in;
-
-    h1 {
-      font-size: 5rem;
-      margin-right: 20px;
-      text-align: right;
-      margin-bottom: 0px;
-    }
-    .greeting {
-      margin-top: 0px;
-      text-align: right;
-      font-size: 60px;
-    }
-    .under-construction {
-      text-align: center;
-    }
-  }
 }
 
 a {
   text-decoration: none;
 }
+.intro-container {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background: transparent;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  /* filter: blur(1px); */
-  li {
-    float: right;
+  img {
+    object-fit: cover;
   }
-  li a {
-    display: block;
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: calc(30px + 2vmin);
+    color: #eee;
+    transition: all 1s ease-in;
+    background-color: #f2bc57;
 
-    text-align: center;
-    padding: 8px 17px;
-    text-decoration: none;
-    justify-content: center;
-    color: #000;
-    letter-spacing: 0.1rem;
-    font-size: 0.8rem;
+    h1 {
+      background-color: green;
+    }
+    .greeting {
+      background-color: red;
+    }
   }
 }
 
+// header ----------------------
+
+.header-container {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* filter: blur(1px); */
+    li {
+      float: right;
+    }
+    li a {
+      display: block;
+
+      text-align: center;
+      padding: 8px 17px;
+      text-decoration: none;
+      justify-content: center;
+      color: #000;
+      letter-spacing: 0.1rem;
+      font-size: 0.8rem;
+    }
+  }
+}
 .window-control {
   width: 12px;
   height: 12px;
@@ -337,7 +332,7 @@ ul {
       0 0 0 1px rgba(26, 53, 71, 0.07);
     animation: border-transform 10s linear infinite alternate forwards;
 
-    svg{
+    svg {
       margin: 10px;
       height: 20px;
       width: 20px;
@@ -346,31 +341,62 @@ ul {
       box-shadow: 0 8px 8px rgba(26, 53, 71, 0.25),
         0 0 0 1px rgba(26, 53, 71, 0.07);
     }
+  }
+}
 
-    &::before {
-      z-index: 2;
-      font-size: 20px;
-      line-height: 40px;
-      text-align: center;
-      width: 100%;
-      height: 40px;
-      opacity: 1;
-      -webkit-transition: all 300ms linear;
-      transition: all 300ms linear;
-    }
-    &::after {
-      content: "\eb8f";
-      top: 0;
-      left: 0;
-      z-index: 2;
-      font-size: 20px;
-      line-height: 40px;
-      text-align: center;
-      width: 100%;
-      height: 40px;
-      opacity: 0;
-      -webkit-transition: all 300ms linear;
-      transition: all 300ms linear;
+// About page -----------------------------
+
+.about {
+  pre {
+    font-size: 20px;
+    margin: 100px;
+    line-height: 1.5;
+  }
+}
+
+// Project page ------
+
+/* List */
+.projects-container {
+  .project-list {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 60px;
+    ul {
+      counter-reset: index;
+      max-width: 500px;
+      padding-bottom: 15px;
+      li {
+        font-size: 1.5rem;
+        counter-increment: index;
+        display: flex;
+        align-items: center;
+        padding: 12px 0;
+        box-sizing: border-box;
+      }
+
+      /* Element counter */
+      li::before {
+        content: counters(index, ".", decimal-leading-zero);
+        font-size: 3rem;
+        text-align: right;
+        font-weight: bold;
+        min-width: 50px;
+        padding-right: 12px;
+        font-variant-numeric: tabular-nums;
+        align-self: flex-start;
+        background-image: linear-gradient(to bottom, aquamarine, orangered);
+        background-attachment: fixed;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Element separation */
+      li + li {
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+      }
     }
   }
+  /* List element */
 }
