@@ -6,9 +6,6 @@
   -webkit-user-select: none;
 }
 
-a {
-  text-decoration: none;
-}
 .intro-container {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -105,17 +102,66 @@ a {
 } */
 
 .callout-wrapper {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  display: block;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  display: flex;
   transition: all 0.25s ease-in;
-  font-size: 20px;
-  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  align-self: auto;
+  // flex-wrap: wrap;
+
+  .get-qoute-container {
+    flex: 1;
+    // font-family: "Roboto";
+    width: 300px;
+    margin-left: 50px;
+    // padding-bottom: -10px ;
+    margin-top: 10px;
+    color: white;
+
+    form {
+      input {
+        font-size: 15px;
+        padding: 10px;
+        width: 200px;
+        border: 1px solid;
+
+        border-bottom: 1px solid #757575;
+        margin-bottom: 10px;
+        &:focus {
+          outline: none;
+        }
+      }
+      button {
+        text-align: center;
+        padding: 10px;
+
+        width: 221px;
+        align-self: center;
+      }
+    }
+  }
+  .footer-socials {
+    flex: 7;
+    font-size: 20px;
+    text-align: center;
+  }
+  .blender-hook {
+    text-align: right;
+    margin-bottom: -180px;
+    margin-right: 20px;
+    // margin: 10px 10px;
+  }
 }
 
 .cw-color-change {
-  color: whitesmoke;
   background: #000000;
+
+  .secondary-header-font {
+    color: whitesmoke;
+  }
+
   svg {
     color: white;
     transition: all 1s ease-in;
@@ -123,16 +169,15 @@ a {
 }
 
 .cw-color-change :hover {
-  color: #000000;
   background: whitesmoke;
+
+  .secondary-header-font {
+    color: #000;
+  }
   svg {
     color: black;
     transition: all 1s ease-in;
   }
-}
-
-#semi-link {
-  color: blue;
 }
 
 /* .svg-logo-footer {
@@ -399,4 +444,55 @@ a {
     }
   }
   /* List element */
+}
+
+// Blender Work
+
+.header-blender-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+
+    // math-depth: ;
+    li {
+      animation-duration: 30ms;
+      margin: 20px;
+      a {
+        text-decoration: none;
+        color: black;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+          color: grey;
+      }
+     
+      }
+    }
+  }
+}
+
+.header-blender-image-container {
+  margin-bottom: 40px;
+  width: 100%;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: "center";
+
+  img{
+    width: 900px;
+    height: 500px;
+    border-radius: 48px;
+    background-size: cover;
+    margin: 25px;
+  }
 }
