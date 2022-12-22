@@ -11,6 +11,9 @@ export default function BlenderWork() {
       <header className="header-blender-container">
         <ul>
           <li>
+            <a href="#iphone">iPhone</a>
+          </li>
+          <li>
             <a href="#abstract">Astract</a>
           </li>
           <li>
@@ -27,7 +30,7 @@ export default function BlenderWork() {
       </header>
 
       <div className="header-blender-image-container">
-        <img id="room" src={iphone} />
+        <img id="iphone" src={iphone} />
         <img id="room" src={room} />
         <img id="chess" src={chess} /> <img id="tenzoz" src={tenzoz1} />
         <img id="abstract" src={abstract} />

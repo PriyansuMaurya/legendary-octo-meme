@@ -50,23 +50,23 @@ function Header(props) {
 
         <div
           className="window-control red"
-          onClick={() => props.setBg("red")}
+          onClick={() => props.setBg("#505c69")}
         />
         <div
           className="window-control yellow"
-          onClick={() => props.setBg("#f2bc57")}
+          onClick={() => props.setBg("#231648")}
         />
         <div
           className="window-control green"
-          onClick={() => props.setBg("#6bb358")}
+          onClick={() => props.setBg("#3e9795")}
         />
         <div
           className="window-control blue"
-          onClick={() => props.setBg("#7a90df")}
+          onClick={() => props.setBg("#015958")}
         />
         <div
           className="window-control darkblue"
-          onClick={() => props.setBg("#535893")}
+          onClick={() => props.setBg("#023535")}
         />
       </ul>
     </header>
