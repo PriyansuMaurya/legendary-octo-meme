@@ -18,8 +18,9 @@ export default function Greeting(props) {
 
   return (
     <div className={props.classN}>
-        <h2 style={{marginRight:"20px"}}>Good<br/>{greetingPrefix}</h2>
+        <span style={{marginRight:"20px"}}>Good<br/>{greetingPrefix},</span>
         {/* <p >{firstname}</p> */}
+        <h2>It's Priyanshu</h2>
     </div>
   );
 }

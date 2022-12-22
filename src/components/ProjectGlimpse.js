@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 export default function ProjectGlimpse(props) {
   return (
-    <div>
+    <section className="slide" id="Glimse">
+      <h1>Glimse</h1>
       <div
         className="pimage-container"
         style={{ flexDirection: props.reverse }}
@@ -18,9 +19,7 @@ export default function ProjectGlimpse(props) {
             the image background used on this page.
           </div>
           <h3>Tech</h3>
-          <div className="badges">
-            
-          </div>
+          <div className="badges"></div>
           <br />
           <div className="btn-container">
             <button role="button">Button 28</button>
@@ -29,6 +28,6 @@ export default function ProjectGlimpse(props) {
         </div>
         {/* <div className="pimage-slider"></div> */}
       </div>
-    </div>
+    </section>
   );
 }

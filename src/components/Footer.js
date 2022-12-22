@@ -86,7 +86,7 @@ export default function Greeting() {
             </a>
           </div>
           <div className="blender-hook">
-            <Link to={"/blender"}>check out my blender work</Link>
+            <Link to={"/blender"} style={{color:"blue"}}>check out my blender work</Link>
           </div>
         </div>
       </div>

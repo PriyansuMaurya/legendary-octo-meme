@@ -1,3 +1,7 @@
+html {
+  background-color: #eeeeee;
+}
+
 * {
   font-family: "IM Fell French Canon SC";
   scroll-behavior: smooth;
@@ -25,13 +29,19 @@
     font-size: calc(30px + 2vmin);
     color: #eee;
     transition: all 1s ease-in;
-    background-color: #f2bc57;
 
-    h1 {
-      background-color: green;
-    }
     .greeting {
-      background-color: red;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      h3 {
+        background-color: #000;
+        margin: 0px;
+      }
+      h2 {
+        background-color: green($color: #000000);
+        margin: 0px;
+      }
     }
   }
 }
@@ -45,7 +55,7 @@
     padding: 0;
     overflow: hidden;
     background: transparent;
-    position: fixed;
+    // position: fixed;
     top: 0;
     width: 100%;
     /* filter: blur(1px); */
@@ -71,7 +81,7 @@
   border-radius: 20px;
   margin: 2px;
   float: left;
-  margin-top: 9px;
+  margin-top: 6px;
   margin-right: 5px;
   cursor: pointer;
 }
@@ -96,10 +106,6 @@
 .darkblue {
   background-color: #535893;
 }
-/* @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-} */
 
 .callout-wrapper {
   padding-top: 1rem;
@@ -125,7 +131,7 @@
         font-size: 15px;
         padding: 10px;
         width: 200px;
-        border: 1px solid;
+        border: 1px solid grey;
 
         border-bottom: 1px solid #757575;
         margin-bottom: 10px;
@@ -143,14 +149,16 @@
     }
   }
   .footer-socials {
-    flex: 7;
+    flex: 5;
     font-size: 20px;
     text-align: center;
+    // display: block;
   }
   .blender-hook {
     text-align: right;
     margin-bottom: -180px;
     margin-right: 20px;
+    font-size: 120%;
     // margin: 10px 10px;
   }
 }
@@ -197,11 +205,11 @@
   justify-content: flex-end;
 
   .item {
+    margin-right: 30px;
     width: 30vw;
     height: 500px;
     background-position: center;
     background-size: 75vh;
-    margin: 1vw;
     // border-radius: 3vw;
     cursor: pointer;
     background-color: burlywood;
@@ -215,11 +223,13 @@
       font-size: 30px;
     }
     h3 {
-      margin-top: -40px;
+      margin-top: -20px;
       margin-left: 12px;
     }
     .discription {
-      margin: -48px 12px 20px 12px;
+      margin: -20px 12px 20px 12px;
+      line-height: 1.5;
+      font-size: 20px;
     }
     .btn-container {
       display: flex;
@@ -228,34 +238,20 @@
 
       button {
         /* appearance: none; */
-        margin-top: 20px;
+
         background-color: white;
         border: 0px;
         box-sizing: border-box;
         padding: 16px 24px;
-        transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+        transition: all 0.2s linear;
         user-select: none;
         touch-action: manipulation;
-        will-change: transform;
-        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-          7px 7px 20px 0px rgba(0, 0, 0, 0.1),
-          4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-      }
 
-      button:disabled {
-        pointer-events: none;
-      }
-
-      button:hover {
-        color: #fff;
-        background-color: #1a1a1a;
-        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-        transform: translateY(-2px);
-      }
-
-      button:active {
-        box-shadow: none;
-        transform: translateY(0);
+        &:hover {
+          color: #fff;
+          background-color: #1a1a1a;
+          box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        }
       }
     }
   }
@@ -264,11 +260,11 @@
     width: 900px;
     height: 500px;
 
-    flex: 1;
+    flex: 2;
     // border-radius: 45px;
     background: url("https://gladisandco.com/wp-content/uploads/2018/12/t9.jpg");
     background-size: cover;
-    margin: 10px;
+    margin: 30px;
     animation: slide 10s infinite;
   }
 }
@@ -296,8 +292,8 @@
   } */
 }
 .resume-btn {
-  width: 91px;
-  height: 29px;
+  width: 92px;
+  height: 27px;
   color: rgb(0, 0, 0);
   border-radius: 14px;
   display: flex;
@@ -307,7 +303,7 @@
   outline: none;
   border: none;
   padding-top: 6px;
-  margin-top: -4px;
+  margin-top: -6px;
   color: #000;
 
   .logo {
@@ -318,34 +314,36 @@
     transition: all 1s ease-in;
   }
   .resume-text {
-    flex: 2;
+    flex: 3;
   }
 }
 
 .header-container {
-  .et-hero-tab {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    color: #000;
-    letter-spacing: 0.1rem;
-    transition: all 0.5s ease;
-    font-size: 0.8rem;
-
-    &:hover {
-      color: white;
-      background: rgba(102, 177, 241, 0.8);
-      transition: all 0.5s ease;
+  ul {
+    // font-weight: 1000;
+    padding-top: 5px;
+    // margin-top: 5px;
+    li {
+      a {
+        letter-spacing: 0.1rem;
+        transition: all 0.5s ease;
+        font-size: 0.8rem;
+        color: white;
+        &:hover {
+          transition: all 0.5s ease;
+        }
+      }
     }
   }
 }
 
 .slide {
   background-color: #eeeeee;
+  margin: 0px;
   h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
+    margin: 0px;
     // background-color: #eeeeee;
   }
 }
@@ -359,7 +357,6 @@
   right: 50px;
   top: 75px;
   display: block;
-  margin: 0 auto;
   text-align: center;
   opacity: 1;
   z-index: 33333;
@@ -394,7 +391,7 @@
 .about {
   pre {
     font-size: 20px;
-    margin: 100px;
+    margin: 40px 100px 30px 100px;
     line-height: 1.5;
   }
 }
@@ -403,6 +400,9 @@
 
 /* List */
 .projects-container {
+  h1 {
+    margin-top: 12px;
+  }
   .project-list {
     display: flex;
     align-items: flex-end;
@@ -424,7 +424,7 @@
       /* Element counter */
       li::before {
         content: counters(index, ".", decimal-leading-zero);
-        font-size: 3rem;
+        font-size: 1.5rem;
         text-align: right;
         font-weight: bold;
         min-width: 50px;
@@ -437,6 +437,20 @@
         -webkit-text-fill-color: transparent;
       }
 
+      li::after {
+        content: counters(index, ".", decimal-leading-zero);
+        font-size: 1.5rem;
+        text-align: left;
+        font-weight: bold;
+        min-width: 50px;
+        padding-left: 12px;
+        font-variant-numeric: tabular-nums;
+        align-self: flex-start;
+        background-color: #000;
+        -webkit-background-clip: text;
+    
+      }
+
       /* Element separation */
       li + li {
         border-top: 1px solid rgba(0, 0, 0, 0.2);
@@ -447,52 +461,63 @@
 }
 
 // Blender Work
-
-.header-blender-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-
-  ul {
-    list-style-type: none;
+.blender {
+  background-color: #eeeeee;
+  .header-blender-container {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
 
-    // math-depth: ;
-    li {
-      animation-duration: 30ms;
-      margin: 20px;
-      a {
-        text-decoration: none;
-        color: black;
-        transition: all 0.2s ease-in;
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
 
-        &:hover {
-          color: grey;
-      }
-     
+      // math-depth: ;
+      li {
+        animation-duration: 30ms;
+        margin: 20px;
+        a {
+          text-decoration: none;
+          color: black;
+          transition: all 0.2s ease-in;
+
+          &:hover {
+            color: grey;
+          }
+        }
       }
     }
   }
-}
 
-.header-blender-image-container {
-  margin-bottom: 40px;
-  width: 100%;
-  min-height: 480px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-position: "center";
+  .header-blender-image-container {
+    margin-bottom: 40px;
+    width: 100%;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: "center";
 
-  img{
-    width: 900px;
-    height: 500px;
-    border-radius: 48px;
-    background-size: cover;
-    margin: 25px;
+    img {
+      width: 900px;
+      height: 500px;
+      border-radius: 48px;
+      background-size: cover;
+      margin: 25px;
+
+      transition: all 0.1s ease-out;
+
+      &:hover {
+        width: 905px;
+        height: 503px;
+        box-shadow: inset 2px 2px 2px 2px rgba(255, 255, 255, 0.5),
+          7px 7px 7px 0px rgba(0, 0, 0, 0.1), 4px 4px 4px 0px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in;
+      }
+    }
   }
 }

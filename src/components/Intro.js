@@ -2,16 +2,21 @@
 import Greeting from "./Greeting";
 import tenzoz from "./images/tenzoz1.png";
 import abstract from "./images/abstract.png";
-import chess from "./images/chess.png";
+import iphone from "./images/untitled5.png";
+import { useState } from "react";
+import Header from "./Header";
 
-function Intro(props) {
+function Intro() {
+  const [bg, setBg] = useState("#7a90df");
   return (
-    <section id="Home">
-      <div className="intro-container" style={{ backgroundColor: props.bg }}>
-        <img className="entry-image"style={{height:"450px",width:"450px"}} src={abstract} />
+    <section id="Home" style={{ backgroundColor: bg }}>
+      <Header setBg={setBg} />
+      <div className="intro-container" >
+        <img className="entry-image"style={{height:"600px",width:"600px"}} src={iphone} />
         <div className="about" >
-          <h1>#Home</h1>
+        
           <Greeting classN="greeting" />
+          
           <div className="under-construction"></div>
         </div>
       </div>
