@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import "../App.scss";
-import resume from '../resume/SOFTWARE ENGINEER.pdf';
+import resume from "../resume/SOFTWARE ENGINEER.pdf";
 function Header(props) {
   // const [bg, setBg] = useState("#89cff0");
 
@@ -8,22 +8,22 @@ function Header(props) {
     <header className="header-container">
       <ul>
         <li>
-          <a class="tab" href="#Home">
+          <a className="tab" href="#Home">
             HOME
           </a>
         </li>
         <li>
-          <a class="tab" href="#About">
+          <a className="tab" href="#About">
             ABOUT
           </a>
         </li>
         <li>
-          <a class="tab" href="#Projects">
+          <a className="tab" href="#Projects">
             PROJECTS
           </a>
         </li>
         <li>
-          <a class="tab" href="#Glimse">
+          <a className="tab" href="#Glimse">
             GLIMES
           </a>
         </li>

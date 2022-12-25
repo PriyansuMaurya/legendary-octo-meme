@@ -12,7 +12,8 @@ function Intro() {
     <section id="Home" style={{ backgroundColor: bg }}>
       <Header setBg={setBg} />
       <div className="intro-container" >
-        <img className="entry-image"style={{height:"600px",width:"600px"}} src={iphone} />
+        {/* <img className="entry-image"style={{height:"600px",width:"600px"}} src={iphone} /> */}
+        <img className="entry-image" src={iphone} />
         <div className="about" >
         
           <Greeting classN="greeting" />

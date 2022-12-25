@@ -11,7 +11,7 @@ export default function Greeting() {
     <>
       <div className="cw-color-change">
         <div className="callout-wrapper">
-          <div class="get-qoute-container">
+          <div className="get-qoute-container">
             
             <h3>
              Get Quotes Every Week
