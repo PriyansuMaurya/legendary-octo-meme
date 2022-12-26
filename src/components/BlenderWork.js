@@ -4,11 +4,15 @@ import abstract from "./images/abstract.png";
 import chess from "./images/chess.png";
 import room from "./images/room.png";
 import tenzoz1 from "./images/tenzoz1.png";
+import iphone from "./images/iphone_11_commercial.png";
 export default function BlenderWork() {
   return (
-    <div>
+    <div className="blender">
       <header className="header-blender-container">
         <ul>
+          <li>
+            <a href="#iphone">iPhone</a>
+          </li>
           <li>
             <a href="#abstract">Astract</a>
           </li>
@@ -26,12 +30,6 @@ export default function BlenderWork() {
       </header>
 
       <div className="header-blender-image-container">
-        <img id="abstract" src={abstract} />
-        <img id="tenzoz" src={tenzoz1} /> 
-        <img id="chess" src={chess} />{" "}
-        <img id="room" src={room} />
-        {/* "https://diagram.com/assets/magician/magician-horizontal.png" */}
-        {/* <div className="pimage-slider"></div> */}
       </div>
     </div>
   );
