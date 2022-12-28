@@ -11,10 +11,10 @@ body {
   scroll-padding-top: 50px;
   // transition: all 0.5s ease-in;
   -webkit-user-select: none;
-  transition: all 0.6s ease-in;
-
 }
-
+#Home {
+  transition: all 0.6s ease-in;
+}
 .intro-container {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -117,7 +117,7 @@ body {
 
 .callout-wrapper {
   padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 0.7rem;
   display: flex;
   transition: all 0.25s ease-in;
   justify-content: space-between;
@@ -156,10 +156,10 @@ body {
         align-self: center;
       }
     }
-    // confirm-email{
-    //   // align-items: center;
-    //   text-align: center;
-    // }
+    .confirm-email {
+      height: 20px;
+      margin-bottom: 0px;
+    }
   }
   .footer-socials {
     flex: 5;
@@ -583,6 +583,9 @@ body {
     }
     .footer-socials {
       font-size: 15px;
+      .secondary-header-font {
+        margin-top: -9px;
+      }
     }
     .blender-hook {
       padding-top: 10px;
@@ -663,7 +666,6 @@ body {
     }
   }
 
-
   .switch {
     width: 80px;
     height: 4px;
@@ -672,21 +674,20 @@ body {
     margin-right: -30px;
     display: block;
     text-align: center;
-  
+
     .circle {
       top: 50%;
       left: -5px;
       width: 40px;
       height: 40px;
       background-color: white;
-  
+
       svg {
         // margin: 10px;
         // height: 20px;
         // width: 20px;
         // background-color: #000;
       }
-
     }
   }
 }

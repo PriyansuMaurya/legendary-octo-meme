@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import "../App.scss";
 
 export default function Greeting() {
-  const [emailSent,setEmailSent ] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
   const submitHandler = (e) => {
     e.preventDefault();
     const name = e.target[0].value;
     const email = e.target[1].value;
     setEmailSent(true);
+
+    setTimeout(() => setEmailSent(false), 3000);
   };
   const iconSize = {
     width: "3em",
@@ -28,7 +30,9 @@ export default function Greeting() {
               <input type="text" placeholder="Email" required />
               <button>SUBSCRIBE</button>
             </form>
-            {emailSent && <p className="confirm-email"> Confirm your Email</p>}
+            <p className="confirm-email">
+              {emailSent && <span> Confirm your Email</span>}
+            </p>
           </div>
           <div className="footer-socials">
             <p className="secondary-header-font">

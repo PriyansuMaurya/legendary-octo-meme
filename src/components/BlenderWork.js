@@ -18,7 +18,7 @@ export default function BlenderWork() {
             <a href="#abstract">Astract</a>
           </li>
           <li>
-            <a href="#tenzoz">Tenzoz</a>
+            <a href="#tenzoz1">Tenzoz</a>
           </li>
           <li>
             <a href="#chess">Chess</a>
@@ -34,8 +34,8 @@ export default function BlenderWork() {
         <img id="iphone" src={iphone} />
         <img id="room" src={room} />
         <img id="chess" src={chess} /> 
-        <img id="tenzoz" src={tenzoz1} />
         <img id="abstract" src={abstract} />
+        <img id="tenzoz1" src={tenzoz1} />
         {/* "https://diagram.com/assets/magician/magician-horizontal.png" */}
         {/* <div className="pimage-slider"></div> */}
       </div>
