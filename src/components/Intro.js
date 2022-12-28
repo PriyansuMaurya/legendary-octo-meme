@@ -1,7 +1,7 @@
 // import './App.css';
 import Greeting from "./Greeting";
-import tenzoz from "./images/tenzoz1.png";
-import abstract from "./images/abstract.png";
+import tenzoz from "../images/tenzoz1.png";
+import abstract from "../images/abstract.png";
 import iphone from "../images/untitled5.png";
 
 import { useState } from "react";
