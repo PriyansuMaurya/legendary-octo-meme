@@ -1,10 +1,11 @@
 import React from "react";
 import "../App.scss";
-import abstract from "./images/abstract.png";
-import chess from "./images/chess.png";
-import room from "./images/room.png";
-import tenzoz1 from "./images/tenzoz1.png";
-import iphone from "./images/iphone_11_commercial.png";
+import abstract from "../images/abstract.png";
+import chess from "../images/chess.png";
+import room from "../images/room.png";
+import tenzoz1 from "../images/tenzoz1.png";
+import iphone from "../images/iphone_11_commercial.png";
+
 export default function BlenderWork() {
   return (
     <div className="blender">
@@ -32,7 +33,8 @@ export default function BlenderWork() {
       <div className="header-blender-image-container">
         <img id="iphone" src={iphone} />
         <img id="room" src={room} />
-        <img id="chess" src={chess} /> <img id="tenzoz" src={tenzoz1} />
+        <img id="chess" src={chess} /> 
+        <img id="tenzoz" src={tenzoz1} />
         <img id="abstract" src={abstract} />
         {/* "https://diagram.com/assets/magician/magician-horizontal.png" */}
         {/* <div className="pimage-slider"></div> */}

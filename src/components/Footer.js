@@ -1,7 +1,15 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.scss";
 
 export default function Greeting() {
+  const [emailSent,setEmailSent ] = useState(false);
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const name = e.target[0].value;
+    const email = e.target[1].value;
+    setEmailSent(true);
+  };
   const iconSize = {
     width: "3em",
     height: "3em",
@@ -12,18 +20,15 @@ export default function Greeting() {
       <div className="cw-color-change">
         <div className="callout-wrapper">
           <div className="get-qoute-container">
-            
-            <h3>
-             Get Quotes Every Week
-            </h3>
+            <h3>Get Quotes Every Week</h3>
 
-            <form>
-             
-                <input type="text" placeholder="Name" required />
-  
-                <input type="text" placeholder="Email" required />
-                <button>SUBSCRIBE</button>
+            <form onSubmit={submitHandler}>
+              <input type="text" placeholder="Name" required />
+
+              <input type="text" placeholder="Email" required />
+              <button>SUBSCRIBE</button>
             </form>
+            {emailSent && <p className="confirm-email"> Confirm your Email</p>}
           </div>
           <div className="footer-socials">
             <p className="secondary-header-font">
@@ -86,7 +91,9 @@ export default function Greeting() {
             </a>
           </div>
           <div className="blender-hook">
-            <Link to={"/blender"} style={{color:"blue"}}>check out my blender work</Link>
+            <Link to={"/blender"} style={{ color: "blue" }}>
+              check out my blender work
+            </Link>
           </div>
         </div>
       </div>

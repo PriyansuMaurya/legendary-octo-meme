@@ -11,6 +11,8 @@ body {
   scroll-padding-top: 50px;
   // transition: all 0.5s ease-in;
   -webkit-user-select: none;
+  transition: all 0.6s ease-in;
+
 }
 
 .intro-container {
@@ -154,6 +156,10 @@ body {
         align-self: center;
       }
     }
+    // confirm-email{
+    //   // align-items: center;
+    //   text-align: center;
+    // }
   }
   .footer-socials {
     flex: 5;

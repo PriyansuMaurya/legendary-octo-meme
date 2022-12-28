@@ -2,16 +2,17 @@ import React from "react";
 import { useEffect, useState } from "react";
 
 export default function Goback(props) {
-  const [visible, setVisible] = useState("");
-  const [setColor, color] = useState("black");
+  const [visible, setVisible] = useState("none");
+
+
   const handleScroll = () => {
     const position = window.pageYOffset;
-    if (position > 1500) {
+    if (position > 1350) {
       setVisible("");
-      setColor("black");
+
     } else {
       setVisible("none");
-      // setColor("white");
+
 
     }
   };
@@ -29,7 +30,7 @@ export default function Goback(props) {
       <div className="circle">
         <a href="#Home">
           <svg
-            style={{ color: color }}
+            style={{ color: "white" }}
             xmlns="http://www.w3.org/2000/svg"
             width="1em"
             height="1em"
