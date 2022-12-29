@@ -25,9 +25,20 @@ export default function Greeting() {
             <h3>Get Quotes Every Week</h3>
 
             <form onSubmit={submitHandler}>
-              <input type="text" placeholder="Name" required />
+              <input
+                type="text"
+                maxlength={12}
+                placeholder="Name"
+                required
+              />
 
-              <input type="text" placeholder="Email" required />
+              <input
+                type="text"
+                minlength={12}
+                maxlength={25}
+                placeholder="Email"
+                required
+              />
               <button>SUBSCRIBE</button>
             </form>
             <p className="confirm-email">
