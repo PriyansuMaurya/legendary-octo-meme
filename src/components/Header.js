@@ -1,9 +1,19 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import "../App.scss";
 import resume from "../resume/SOFTWARE ENGINEER.pdf";
 function Header(props) {
   // const [bg, setBg] = useState("#89cff0");
+  const setBackgroundCache = (bgcolor) => {
+    localStorage.setItem("intro_background", bgcolor);
 
+    props.setBg(localStorage.getItem("intro_background"));
+  };
+
+  useEffect(() => {
+    if (localStorage.getItem("intro_background")) {
+      props.setBg(localStorage.getItem("intro_background"));
+    }
+  });
   return (
     <header className="header-container">
       <ul>
@@ -50,23 +60,23 @@ function Header(props) {
 
         <div
           className="window-control red"
-          onClick={() => props.setBg("#505c69")}
+          onClick={() => setBackgroundCache("#505c69")}
         />
         <div
           className="window-control yellow"
-          onClick={() => props.setBg("#231648")}
+          onClick={() => setBackgroundCache("#231648")}
         />
         <div
           className="window-control green"
-          onClick={() => props.setBg("#3e9795")}
+          onClick={() => setBackgroundCache("#3e9795")}
         />
         <div
           className="window-control blue"
-          onClick={() => props.setBg("#015958")}
+          onClick={() => setBackgroundCache("#015958")}
         />
         <div
           className="window-control darkblue"
-          onClick={() => props.setBg("#023535")}
+          onClick={() => setBackgroundCache("#023535")}
         />
       </ul>
     </header>

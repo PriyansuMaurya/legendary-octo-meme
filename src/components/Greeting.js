@@ -18,9 +18,24 @@ export default function Greeting(props) {
 
   return (
     <div className={props.classN}>
-        <span style={{marginRight:"20px"}}>Good<br/>{greetingPrefix},</span>
-        {/* <p >{firstname}</p> */}
-        <h2>It's Priyanshu</h2>
+      <span style={{ marginRight: "20px" }}>
+        Good
+        <br />
+        {greetingPrefix},
+      </span>
+      <h2 className="wordCarousel">
+      It's 
+        <div>
+          <ul class="flip5">
+            <li>Priyanshu</li>
+            <li>iPhone</li>
+            <li>Priyanshu</li>
+            <li>iPhone</li>
+            <li>Priyanshu</li>
+            <li>iPhone</li>
+          </ul>
+        </div>
+      </h2>
     </div>
   );
 }

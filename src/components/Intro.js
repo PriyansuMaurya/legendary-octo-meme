@@ -8,14 +8,21 @@ import { useState } from "react";
 import Header from "./Header";
 
 function Intro() {
-  const [bg, setBg] = useState("#7a90df");
+  const [bg, setBg] = useState(localStorage.getItem("intro_background"));
   const [loading, setLoading] = useState(true);
   return (
     <section id="Home" style={{ backgroundColor: bg }}>
       <Header setBg={setBg} />
       <div className="intro-container">
         {/* <img className="entry-image"style={{height:"600px",width:"600px"}} src={iphone} /> */}
-        <img className="entry-image" onload={() => {setLoading(false);console.log(loading)}} src={iphone} />
+        <img
+          className="entry-image"
+          onload={() => {
+            setLoading(false);
+            console.log(loading);
+          }}
+          src={iphone}
+        />
         <div className="about">
           <Greeting classN="greeting" />
 

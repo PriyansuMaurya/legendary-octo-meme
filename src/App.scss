@@ -45,9 +45,67 @@ body {
         background-color: #000;
         margin: 0px;
       }
-      h2 {
-        background-color: green($color: #000000);
-        margin: 0px;
+      .wordCarousel {
+        margin-top: 10px;
+        div {
+          overflow: hidden;
+          // position: relative;
+          float: right;
+          height: 65px;
+          margin-left: -26px;
+          padding-top: 10px;
+          margin-top: -10px;
+          li {
+            color: #eee;
+            font-weight: 700;
+            height: 45px;
+            margin-bottom: 45px;
+            display: block;
+          }
+        }
+      }
+
+      .flip5 {
+        animation: flip5 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+      }
+
+      @keyframes flip5 {
+        0% {
+          margin-top: -450px;
+        }
+        5% {
+          margin-top: -360px;
+        }
+        20% {
+          margin-top: -360px;
+        }
+        25% {
+          margin-top: -270px;
+        }
+        40% {
+          margin-top: -270px;
+        }
+        45% {
+          margin-top: -180px;
+        }
+        60% {
+          margin-top: -180px;
+        }
+        65% {
+          margin-top: -90px;
+        }
+        80% {
+          margin-top: -90px;
+        }
+        85% {
+          margin-top: 0px;
+        }
+        99.99% {
+          margin-top: 0px;
+        }
+        100% {
+          margin-top: -450px;
+        }
       }
     }
   }
@@ -435,18 +493,14 @@ body {
       max-width: 500px;
       padding-bottom: 15px;
       li {
-        font-size: 1.5rem;
+        font-size: 22px;
         counter-increment: index;
         display: flex;
-        // align-items: center;
-        // padding: 12px 0;
         box-sizing: border-box;
       }
 
-      /* Element counter */
       li::before {
         content: counters(index, ".", decimal-leading-zero);
-        font-size: 1.5rem;
         text-align: center;
         font-weight: bold;
         min-width: 50px;
