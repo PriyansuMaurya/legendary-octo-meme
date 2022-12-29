@@ -12,6 +12,8 @@ function Header(props) {
   useEffect(() => {
     if (localStorage.getItem("intro_background")) {
       props.setBg(localStorage.getItem("intro_background"));
+    }else{
+      props.setBg("#023535");
     }
   });
   return (
