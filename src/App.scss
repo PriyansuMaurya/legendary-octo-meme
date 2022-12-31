@@ -600,6 +600,46 @@ body {
   }
 }
 
+// Splash screen csss
+.glassmorphism-container {
+  background-image: url("https://images.pexels.com/photos/5797912/pexels-photo-5797912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  // height: 100%;
+  width: 100%;
+  visibility: hidden;
+  animation: fadein 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s; /* no spinner flickering for fast load times */
+
+  @keyframes fadein {
+    from {
+      visibility: visible;
+      opacity: 1;
+    }
+    to {
+      visibility: visible;
+      opacity: .2;
+    }
+  }
+  .splash-signature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    // width: 100%;
+    backdrop-filter: blur(4px) saturate(58%);
+    -webkit-backdrop-filter: blur(4px) saturate(58%);
+    background-color: rgba(17, 25, 40, 0.27);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    svg {
+      // height: 30%;
+      // width: 30%;
+    }
+  }
+}
+
 @media only screen and (max-width: 450px) {
   .intro-container {
     flex-direction: column-reverse;
@@ -741,6 +781,18 @@ body {
         // height: 20px;
         // width: 20px;
         // background-color: #000;
+      }
+    }
+  }
+
+  .glassmorphism-container {
+    // height: 100%;
+    // width: 100%;
+
+    .splash-signature {
+      border svg {
+        height: 100px;
+        height: 100px;
       }
     }
   }

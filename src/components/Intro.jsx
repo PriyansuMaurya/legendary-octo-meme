@@ -17,9 +17,8 @@ function Intro() {
         {/* <img className="entry-image"style={{height:"600px",width:"600px"}} src={iphone} /> */}
         <img
           className="entry-image"
-          onload={() => {
+          onLoad={() => {
             setLoading(false);
-            console.log(loading);
           }}
           src={iphone}
         />

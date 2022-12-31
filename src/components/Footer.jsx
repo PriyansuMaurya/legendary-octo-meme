@@ -27,15 +27,15 @@ export default function Greeting() {
             <form onSubmit={submitHandler}>
               <input
                 type="text"
-                maxlength={12}
+                maxLength={12}
                 placeholder="Name"
                 required
               />
 
               <input
                 type="text"
-                minlength={12}
-                maxlength={25}
+                minLength={12}
+                maxLength={25}
                 placeholder="Email"
                 required
               />

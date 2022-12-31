@@ -26,7 +26,7 @@ export default function Greeting(props) {
       <h2 className="wordCarousel">
       It's 
         <div>
-          <ul class="flip5">
+          <ul className="flip5">
             <li>Priyanshu</li>
             <li>iPhone</li>
             <li>Priyanshu</li>

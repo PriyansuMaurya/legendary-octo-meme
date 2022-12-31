@@ -41,7 +41,7 @@ function Header(props) {
         </li>
         <li>
           <a href={resume}>
-            <button class="resume-btn btn-16">
+            <button className="resume-btn btn-16">
               <svg
                 className="logo"
                 xmlns="http://www.w3.org/2000/svg"
