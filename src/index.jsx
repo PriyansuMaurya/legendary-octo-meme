@@ -3,13 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { SplashScreen } from "./pages/SplashScreen";
 import { Route, BrowserRouter as Routes, useRoutes } from "react-router-dom";
-
+// import App from "./pages/App";
+// import BlenderWork from "./pages/BlenderWork";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const LazyApp = React.lazy(() => fakeDelay(1500)(import("./pages/App")));
-const LazyBlenderWorks = React.lazy(() =>
-  fakeDelay(2000)(import("./pages/BlenderWork"))
-);
+const LazyApp = React.lazy(() => fakeDelay(3100)(import("./pages/App")));
+const LazyBlenderWorks = React.lazy(() => import("./pages/BlenderWork"));
 
 // add some async delay for illustration purposes
 function fakeDelay(ms) {
@@ -26,7 +25,7 @@ const RoutedApp = () => {
     {
       path: "/",
       element: (
-        <React.Suspense fallback={<SplashScreen />}>
+        <React.Suspense fallback={<SplashScreen animationId="splash-text" />}>
           <LazyApp />
         </React.Suspense>
       ),
@@ -49,4 +48,3 @@ root.render(
     <RoutedApp />
   </Routes>
 );
-

@@ -607,21 +607,18 @@ body {
   background-repeat: no-repeat;
   // height: 100%;
   width: 100%;
-  visibility: hidden;
-  animation: fadein 2s;
-  animation-fill-mode: forwards;
-  animation-delay: 0.5s; /* no spinner flickering for fast load times */
+  // animation: fadein 1.5s;
+  // animation-fill-mode: forwards;
 
-  @keyframes fadein {
-    from {
-      visibility: visible;
-      opacity: 1;
-    }
-    to {
-      visibility: visible;
-      opacity: .2;
-    }
-  }
+  // @keyframes fadein {
+  //   from {
+  //     transform: translateY(100px);
+  //   }
+  //   to {
+  //     transform: translateY(-1000px);
+
+  //   }
+  // }
   .splash-signature {
     display: flex;
     justify-content: center;
@@ -633,9 +630,19 @@ body {
     background-color: rgba(17, 25, 40, 0.27);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
-    svg {
-      // height: 30%;
-      // width: 30%;
+    #splash-text {
+      height: 50vh;
+      width: 80vh;
+      stroke-dasharray: 2934;
+      animation: 3s fill-svg linear;
+    }
+    @keyframes fill-svg {
+      0% {
+        stroke-dashoffset: 2934;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
     }
   }
 }
