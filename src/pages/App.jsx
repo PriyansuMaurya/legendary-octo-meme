@@ -22,7 +22,7 @@ function App() {
 
       {/* <ProjectGlimpse reverse="row-reverse" project="Project 1" /> */}
       {/* <ProjectGlimpse reverse="" project="Project 2" /> */}
-      <div className="teach-about">
+      <div className="teach-about" id="teach-about">
         <TechLearning />
         {/* <TechLearning /> */}
         {/* <Spacer x={2} /> */}

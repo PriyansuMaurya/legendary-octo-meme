@@ -22,7 +22,7 @@ function Header(props) {
     <header className="header-container">
       <ul>
         <li>
-          <a className="tab" href="#About">
+          <a className="tab" href="#teach-about">
             <Button light size="xs" color="black" auto>
               ABOUT
             </Button>

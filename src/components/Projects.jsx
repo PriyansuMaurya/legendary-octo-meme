@@ -42,10 +42,10 @@ export default function Projects() {
   );
 
   return (
-    <div className="project-container">
+    <div className="project-container" id="Projects">
       <h1>Projects</h1>
       <div className="project-list">
-        <Grid.Container gap={5} justify="center">
+        <Grid.Container gap={1} justify="center">
           <Grid>{card}</Grid>
           <Grid>{card}</Grid>
           <Grid>{card}</Grid>
