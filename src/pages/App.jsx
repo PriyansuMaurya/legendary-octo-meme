@@ -9,7 +9,8 @@ import About from "../components/About";
 import Projects from "../components/Projects";
 import GoBack from "../components/Goback";
 import { useState } from "react";
-
+import TechLearning from "../components/TechLearning";
+import { Spacer, Card } from "@nextui-org/react";
 function App() {
   const [bg, setBg] = useState("#7a90df");
 
@@ -20,8 +21,13 @@ function App() {
       <Projects />
 
       {/* <ProjectGlimpse reverse="row-reverse" project="Project 1" /> */}
-      <ProjectGlimpse reverse="" project="Project 2" />
-      <About />
+      {/* <ProjectGlimpse reverse="" project="Project 2" /> */}
+      <div className="teach-about">
+        <TechLearning />
+        {/* <TechLearning /> */}
+        {/* <Spacer x={2} /> */}
+        <About />
+      </div>
 
       <Footer />
 

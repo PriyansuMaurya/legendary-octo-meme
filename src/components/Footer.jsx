@@ -22,7 +22,7 @@ export default function Greeting() {
       <div className="cw-color-change">
         <div className="callout-wrapper">
           <div className="get-qoute-container">
-            <h3>Get Quotes Every Week</h3>
+            {/* <h3>Quotes Every Week</h3>
 
             <form onSubmit={submitHandler}>
               <input
@@ -43,14 +43,10 @@ export default function Greeting() {
             </form>
             <p className="confirm-email">
               {emailSent && <span> Confirm your Email</span>}
-            </p>
+            </p> */}
           </div>
           <div className="footer-socials">
-            <p className="secondary-header-font">
-              Solving problems with user-centric design
-            </p>
-            <p className="secondary-header-font">Learn more about me </p>
-            <a href="https://www.linkedin.com/in/priyanshu-maurya/">
+            <a href="https://www.linkedin.com/in/priyanshu-maurya/" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 style={iconSize}
@@ -63,7 +59,7 @@ export default function Greeting() {
                 />
               </svg>
             </a>
-            <a href="https://twitter.com/Pr17anshu">
+            <a href="https://twitter.com/PrianshuMaurya" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 style={iconSize}
@@ -76,7 +72,7 @@ export default function Greeting() {
                 />
               </svg>
             </a>
-            <a href="https://github.com/PriyansuMaurya">
+            <a href="https://github.com/PriyansuMaurya" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 style={iconSize}
@@ -89,7 +85,7 @@ export default function Greeting() {
                 />
               </svg>
             </a>
-            <a href="mailto:pr17anshu@gmail.com">
+            <a href="mailto:pr17anshu@gmail.com" target="_blank">
               <abbr title="Get in touch with me">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

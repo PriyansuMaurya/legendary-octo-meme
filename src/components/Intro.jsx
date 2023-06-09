@@ -20,7 +20,7 @@ function Intro() {
   }
   // , backgroundImage: `url(${floorTile}) `, 
   return (
-    <section id="Home" style={{ backgroundColor: bg }}>
+    <section id="Home" className={ bg } >
       <Header setBg={setBg} />
       <div className="intro-container">
         {/* <img className="entry-image"style={{height:"600px",width:"600px"}} src={iphone} /> */}

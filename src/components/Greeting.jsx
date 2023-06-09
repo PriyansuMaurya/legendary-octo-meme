@@ -27,12 +27,12 @@ export default function Greeting(props) {
       It's 
         <div>
           <ul className="flip5">
-            <li>Priyanshu</li>
-            <li>iPhone</li>
-            <li>Priyanshu</li>
-            <li>iPhone</li>
-            <li>Priyanshu</li>
-            <li>iPhone</li>
+            <li><h2>Priyanshu</h2></li>
+            <li><h2>iPhone</h2></li>
+            <li><h2>Priyanshu</h2></li>
+            <li><h2>iPhone</h2></li>
+            <li><h2>Priyanshu</h2></li>
+            <li><h2>iPhone</h2></li>
           </ul>
         </div>
       </h2>

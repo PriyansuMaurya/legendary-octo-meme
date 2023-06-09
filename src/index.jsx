@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { SplashScreen } from "./pages/SplashScreen";
 import { Route, BrowserRouter as Routes, useRoutes } from "react-router-dom";
+import { NextUIProvider } from "@nextui-org/react";
 // import App from "./pages/App";
 // import BlenderWork from "./pages/BlenderWork";
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -44,7 +45,9 @@ const RoutedApp = () => {
 };
 
 root.render(
-  <Routes>
-    <RoutedApp />
-  </Routes>
+  <NextUIProvider>
+    <Routes>
+      <RoutedApp />
+    </Routes>
+  </NextUIProvider>
 );

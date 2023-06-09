@@ -1,4 +1,3 @@
-html,
 body {
   background-color: #eeeeee;
   overflow-x: hidden;
@@ -55,12 +54,12 @@ body {
           // position: relative;
           float: right;
           height: 65px;
-          margin-left: -26px;
-          padding-top: 10px;
+          margin-left: -10px;
+          padding-top: 5px;
           margin-top: -10px;
+
           li {
             color: #eee;
-            font-weight: 700;
             height: 45px;
             margin-bottom: 45px;
             display: block;
@@ -143,37 +142,52 @@ body {
     }
   }
 }
-.window-control {
-  width: 12px;
-  height: 12px;
-  border-radius: 20px;
-  margin: 2px;
-  float: left;
-  margin-top: 6px;
-  margin-right: 5px;
-  cursor: pointer;
+
+.color-controls {
+  margin-left: 10px;
+  .window-control {
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    margin: 2px;
+    float: left;
+    margin: 5px;
+    cursor: pointer;
+  }
 }
 
 .red {
-  background-color: #505c69;
-  margin-left: 15px;
+  background-color: hsla(214, 32%, 22%, 1);
+  background-image: radial-gradient(
+      at 0% 100%,
+      hsla(206, 22%, 41%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 80% 50%, hsla(214, 32%, 22%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(206, 30%, 89%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(202, 20%, 68%, 1) 0px, transparent 50%);
 }
 
 .yellow {
-  background-color: #231648;
-}
-
-.green {
-  background-color: #3e9795;
+  background-color: hsla(250, 47%, 7%, 1);
+  background-image: radial-gradient(
+      at 11% 92%,
+      hsla(248, 46%, 19%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 38% 41%, hsla(247, 84%, 64%, 1) 0px, transparent 50%),
+    radial-gradient(at 90% 98%, hsla(247, 46%, 41%, 1) 0px, transparent 50%),
+    radial-gradient(at 11% 79%, hsla(248, 46%, 30%, 1) 0px, transparent 50%),
+    radial-gradient(at 35% 69%, hsla(248, 52%, 52%, 1) 0px, transparent 50%);
 }
 
 .blue {
-  background-color: #015958;
-}
-
-.darkblue {
-  background-color: #023535;
-  // background-color: #535893;
+background-color:hsla(120,0%,0%,1);
+background-image:
+radial-gradient(at 95% 38%, hsla(2,100%,5%,1) 0px, transparent 50%),
+radial-gradient(at 38% 95%, hsla(68,4%,26%,1) 0px, transparent 50%),
+radial-gradient(at 82% 58%, hsla(56,9%,34%,1) 0px, transparent 50%),
+radial-gradient(at 10% 58%, hsla(14,100%,7%,1) 0px, transparent 50%);
 }
 
 .callout-wrapper {
@@ -200,7 +214,7 @@ body {
       input {
         font-size: 15px;
         padding: 10px;
-        width: 200px;
+        width: 14em;
         border: 1px solid grey;
 
         border-bottom: 1px solid #757575;
@@ -212,9 +226,10 @@ body {
       button {
         text-align: center;
         padding: 10px;
-
-        width: 221px;
+        width: 14em;
         align-self: center;
+        background-color: white;
+        color: #000;
       }
     }
     .confirm-email {
@@ -229,8 +244,6 @@ body {
     // display: block;
   }
   .blender-hook {
-    // text-align: right;
-    margin-bottom: -180px;
     font-size: 120%;
     margin-right: 20px;
   }
@@ -239,9 +252,9 @@ body {
 .cw-color-change {
   background: #000000;
 
-  .secondary-header-font {
-    color: whitesmoke;
-  }
+  // .secondary-header-font {
+  //   color: whitesmoke;
+  // }
 
   svg {
     color: white;
@@ -418,12 +431,6 @@ body {
 .slide {
   background-color: #eeeeee;
   margin: 0px;
-  h1 {
-    font-size: 2rem;
-    text-align: center;
-    margin: 0px;
-    // background-color: #eeeeee;
-  }
 }
 
 .switch {
@@ -463,83 +470,41 @@ body {
     }
   }
 }
+.teach-about {
+  display: flex;
+  flex-direction: row;
+  // align-items: center;
+  justify-content: center;
+  align-content: space-between;
+}
 
 // About page -----------------------------
-
-.about {
-  margin-bottom: 20px;
-
-  p {
-    line-height: 1.5;
-    margin: 2rem 2rem;
-    font-size: 18px;
-    line-height: 1.7;
-    margin-bottom: 10px;
+.about-container {
+  display: flex;
+  img {
+    width: 40%;
+    height: 40%;
+    border-radius: 20px;
+  }
+  span {
+    margin: 15px;
   }
 }
 
 // Project page ------
 
 /* List */
-.projects-container {
-  h1 {
-    margin-top: 12px;
-  }
+.project-container {
+  margin: 0px 50px 50px 50px;
   .project-list {
     margin-left: -35px;
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-
-    ul {
-      counter-reset: index;
-      max-width: 500px;
-      padding-bottom: 15px;
-      li {
-        font-size: 22px;
-        counter-increment: index;
-        display: flex;
-        box-sizing: border-box;
-      }
-
-      li::before {
-        content: counters(index, ".", decimal-leading-zero);
-        text-align: center;
-        font-weight: bold;
-        min-width: 50px;
-        padding-right: 12px;
-        font-variant-numeric: tabular-nums;
-        align-self: flex-start;
-        background-image: linear-gradient(
-          to bottom,
-          aquamarine,
-          rgb(255, 166, 0)
-        );
-        background-attachment: fixed;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      // li::after {
-      //   content: counters(index, ".", decimal-leading-zero);
-      //   font-size: 1.5rem;
-      //   text-align: center;
-      //   font-weight: bold;
-      //   min-width: 50px;
-      //   padding-left: 12px;
-      //   font-variant-numeric: tabular-nums;
-      //   align-self: flex-start;
-      //   background-color: #000;
-      //   -webkit-background-clip: text;
-      // }
-      // /* Element separation */
-      // li + li {
-      //   border-top: 1px solid rgba(0, 0, 0, 0.2);
-      // }
-    }
   }
-  /* List element */
 }
+
+/* List element */
 
 // Blender Work
 
@@ -679,10 +644,6 @@ body {
           font-size: 15px;
           width: 250px;
         }
-        button {
-          text-align: center;
-          width: 272px;
-        }
       }
     }
     .footer-socials {
@@ -726,16 +687,10 @@ body {
 
   .projects-container {
     margin: 10px;
-    h1 {
-      margin-top: 12px;
-    }
   }
 
   /* List */
   .projects-container {
-    h1 {
-      margin-top: 12px;
-    }
     .project-list {
       margin-left: -35px;
       display: flex;
