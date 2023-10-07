@@ -35,7 +35,7 @@ function Header(props) {
           </a>
         </li>
         <li>
-          <a href={'../../public/resume/Priyanshu_Maurya_Resume_01_08_2023.pdf'} target="_blank">
+          <a href={'https://github.com/PriyansuMaurya/priyansu.vercel.app/files/12838988/Priyanshu_Maurya_Resume_01_08_2023.pdf'} target="_blank">
             <Button
               auto
               size="xs"
