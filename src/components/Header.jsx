@@ -1,6 +1,5 @@
 import { createContext, useEffect, useState } from "react";
 import "../App.scss";
-import resume from "../resume/SOFTWARE ENGINEER.pdf";
 import { Button, Grid } from "@nextui-org/react";
 
 function Header(props) {
@@ -36,7 +35,7 @@ function Header(props) {
           </a>
         </li>
         <li>
-          <a href={resume} target="_blank">
+          <a href={'../../public/resume/Priyanshu_Maurya_Resume_01_08_2023.pdf'} target="_blank">
             <Button
               auto
               size="xs"

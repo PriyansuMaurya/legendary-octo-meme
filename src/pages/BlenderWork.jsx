@@ -1,16 +1,11 @@
 import React from "react";
 import "../App.scss";
-import abstract from "../images/abstract.png";
-import chess from "../images/chess.png";
-import room from "../images/room.png";
-import tenzoz1 from "../images/tenzoz1.png";
-import iphone from "../images/iphone_11_commercial.png";
 
 import useImageLoadChecker from "../hooks/useImageLoadChecker";
 import { SplashScreen } from "./SplashScreen";
 
 export default function BlenderWork() {
-  const photos = [iphone, room, chess, abstract, tenzoz1];
+  const photos = ['../../public/images/iphone_11_commercial.png', '../../public/images/room.png', '../../public/images/chess.png', '../../public/images/abstract.png', '../../public/images/tenzoz1.png'];
   const imagesLoaded = useImageLoadChecker(photos);
   if (!imagesLoaded) {
     return <SplashScreen />;
@@ -39,11 +34,11 @@ export default function BlenderWork() {
       </header>
 
       <div className="header-blender-image-container">
-        <img id="iphone" src={iphone} />
-        <img id="room" src={room} />
-        <img id="chess" src={chess} />
-        <img id="abstract" src={abstract} />
-        <img id="tenzoz1" src={tenzoz1} />
+        <img id="iphone" src={'../../public/images/iphone_11_commercial.png'} />
+        <img id="room" src={'../../public/images/room.png'} />
+        <img id="chess" src={'../../public/images/chess.png'} />
+        <img id="abstract" src={'../../public/images/abstract.png'} />
+        <img id="tenzoz1" src={'../../public/images/tenzoz1.png'} />
         {/* "https://diagram.com/assets/magician/magician-horizontal.png" */}
         {/* <div className="pimage-slider"></div> */}
       </div>
