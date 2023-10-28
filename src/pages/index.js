@@ -40,7 +40,7 @@ const items = [
 export default function Home() {
   const [colorIndex, setColorIndex] = useState(0);
   const el = React.useRef(null);
-  const [navHidden, setNavHidden] = useState('translate-x-full');
+  const [navHidden, setNavHidden] = useState('-translate-y-full');
   useEffect(() => {
     setTimeout(() => {
       setColorIndex((colorIndex + 1) % colors.length);
@@ -90,21 +90,47 @@ export default function Home() {
           </div>
 
           {/* for mobile */}
-          <button aria-label="Toggle Menu" class="md:hidden mr-8 mt-11 h-8 w-8" onClick={() => setNavHidden('translate-x-0')}>
+          <button aria-label="Toggle Menu" class="md:hidden mr-8 mt-11 h-8 w-8" onClick={() => setNavHidden('-translate-y-0')}>
             <CiMenuFries size={35} />
           </button>
-          <div class={`fixed left-0 top-0 z-10 h-full w-full transform bg-white opacity-95 duration-300 ease-in-out dark:bg-gray-950 dark:opacity-[0.98] ${navHidden}`}>
+          <div class={`fixed left-0 top-0 z-10 h-full w-full transform bg-grey-100 duration-300 ease-in-out dark:bg-slate-200 ${navHidden}`}>
             <div class="flex justify-end">
-              <button class="mr-8 mt-11 h-8 w-8" aria-label="Toggle Menu" onClick={() => setNavHidden('translate-x-full')}>
-                <TfiClose size={25} />
+              <button class="mr-8 mt-11 h-8 w-8" aria-label="Toggle Menu" onClick={() => setNavHidden('-translate-y-full')}>
+                <TfiClose className="text-slate-950" size={25} />
               </button>
             </div>
-            <nav class="fixed mt-8 h-full">
-              <div class="px-12 py-4">
-                <a class="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100" href="/">Home</a>
-              </div>
-
+            <nav class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+              <ul class="divide-y-4 divide-gray-200 dark:divide-slate-950">
+                <li class="py-6">
+                  <div class="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                    <div class="space-y-5 xl:col-span-3">
+                      <div class="space-y-6">
+                        <h2 class="text-5xl font-bold leading-8 tracking-tight"><a class="text-gray-900 dark:text-gray-900" href="/blog/release-of-tailwind-nextjs-starter-blog-v2.0">WORK</a></h2>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-6">
+                  <div class="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                    <div class="space-y-5 xl:col-span-3">
+                      <div class="space-y-6">
+                        <h2 class="text-5xl font-bold leading-8 tracking-tight"><a class="text-gray-900 dark:text-gray-900" href="/blog/release-of-tailwind-nextjs-starter-blog-v2.0">ABOUT</a></h2>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-6">
+                  <div class="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                    <div class="space-y-5 xl:col-span-3">
+                      <div class="space-y-6">
+                        <h2 class="text-5xl font-bold leading-8 tracking-tight"><a class="text-gray-900 dark:text-gray-900" href="/blog/release-of-tailwind-nextjs-starter-blog-v2.0">CONTACT</a></h2>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </nav>
+
           </div>
 
         </header>
@@ -121,39 +147,61 @@ export default function Home() {
       </div>
 
       <section>
-        <div class="m-10 flex justify-end"><h2 class="text-3xl font-normal text-gray-900">About me</h2></div>
-        <div class="wrap mx-auto p-4 pb-8 md:p-20 md:flex gap-8 items-center justify-between">
-
-          <div class="mb-6 md:mb-0 md:w-1/2">
-            <div class="aspect-w-1 aspect-h-1">
-
+        <div class="relative items-center w-full px-5 pt-24 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
+          <div class="gap-12 lg:grid-cols-2 lg:grid">
+            <div>
+              <div class="max-w-xl">
+                <div>
+                  <p class="text-2xl font-medium tracking-tight text-black sm:text-2xl">
+                    I am a Software developer based on Mumbai, I have launched an open-source
+                    project that received 2000+ visits in just 2 days, and people
+                    appreciated its simple UI. I led a team of 2 to complete the project
+                    on time. My interests lie in front-end development, UI/UX, and
+                    Machine learning. Moreover, I actively share useful content on
+                    LinkedIn and Twitter to help others.
+                  </p>
+                </div>
+              </div>
+              <div class="mx-auto mt-12 lg:max-w-7xl">
+                <ul role="list" class="grid grid-cols-2 gap-4 list-none lg:gap-6">
+                  <li>
+                    <div>
+                      <p class="mt-5 text-lg font-medium leading-6 text-black">
+                        Easy onboarding
+                      </p>
+                    </div>
+                    <div class="mt-2 text-base text-gray-500">
+                      Plus, our platform is constantly evolving to meet the changing
+                      needs.
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <p class="mt-5 text-lg font-medium leading-6 text-black">
+                        Customer support
+                      </p>
+                    </div>
+                    <div class="mt-2 text-base text-gray-500">
+                      Plus, our platform is constantly evolving to meet the changing
+                      needs.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="order-first block w-full mt-12 aspect-square lg:mt-0">
               <Image
-                className={`my-5 w-[400px] md:w-[450px] lg:w-[500px] 2xl:w-[550px] text-xl`}
+                class="object-cover object-center w-full mx-auto bg-gray-300 lg:ml-auto "
                 src={profile}
                 width={500}
                 height={500}
                 alt="Picture of the author"
               />
-
             </div>
           </div>
-
-          <div class="md:w-1/2 md:max-w-xl">
-            <h2 class="text-3.5xl lg:text-5xl leading-snug mb-4 text-slate-800">Hello there!</h2>
-            {/* <p class="md:text-lg w-96 lg:text-xl max-w-xl space-y-6 text-slate-800">
-              I am Priyanshu Maurya, 4th year B.E Student in computer science.
-              Here are some of my accomplisment, I have launched an open-source
-              project that received 2000+ visits in just 2 days, and people
-              appreciated its simple UI. I led a team of 2 to complete the project
-              on time. My interests lie in front-end development, UI/UX, and
-              Machine learning. Moreover, I actively share useful content on
-              LinkedIn and Twitter to help others.
-
-            </p> */}
-          </div>
-
         </div>
       </section>
+
       {/* <div className="relative min-h-screen bg-cover bg-no-repeat bg-fixed bg-center">
         <div className="w-56 absolute bottom-0 right-0 ... bg-orange-200 rounded-l-full p-4 flex items-center justify-center ...">
           <div className="bg-white rounded-full p-4 flex items-center justify-center ...">
@@ -165,6 +213,64 @@ export default function Home() {
         </div>
       </div> */}
       <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+
+
+      {/* projects */}
+
+      <section class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+        <div class="flex h-screen flex-col justify-between font-sans">
+          <main class="mb-auto">
+            <div class="divide-y-4 divide-gray-200 dark:divide-gray-700">
+              <div class="space-y-2 pb-8 pt-6 md:space-y-5">
+                <h1 class="md:leading-14 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl">Latest</h1>
+              </div>
+              <ul class="divide-y-4 divide-gray-200 dark:divide-gray-700">
+                <li class="py-12">
+                  <article>
+                    <div class="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                      <dl>
+                        <dt class="sr-only">Published on</dt>
+                        <dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400"><time datetime="2023-08-05T00:00:00.000Z">August 5, 2023</time></dd>
+                      </dl>
+                      <div class="space-y-5 xl:col-span-3">
+                        <div class="space-y-6">
+                          <div>
+                            <h2 class="text-2xl font-bold leading-8 tracking-tight"><a class="text-gray-900 dark:text-gray-900" href="/blog/release-of-tailwind-nextjs-starter-blog-v2.0">Release of Tailwind Nextjs Starter Blog v2.0</a></h2>
+                            <div class="flex flex-wrap"><a class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="/tags/next-js">next-js</a><a class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="/tags/tailwind">tailwind</a><a class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="/tags/guide">guide</a><a class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="/tags/feature">feature</a></div>
+                          </div>
+                          <div class="prose max-w-none text-gray-500 dark:text-gray-400">Release of Tailwind Nextjs Starter Blog template v2.0, refactored with Nextjs App directory and React Server Components setup.Discover the new features and how to migrate from V1.</div>
+                        </div>
+                        <div class="text-base font-medium leading-6"><a class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400" aria-label='Read "Release of Tailwind Nextjs Starter Blog v2.0"' href="/blog/release-of-tailwind-nextjs-starter-blog-v2.0">Read more →</a></div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+                <li class="py-12">
+                  <article>
+                    <div class="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                      <dl>
+                        <dt class="sr-only">Published on</dt>
+                        <dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400"><time datetime="2021-08-07T15:32:14.000Z">August 7, 2021</time></dd>
+                      </dl>
+                      <div class="space-y-5 xl:col-span-3">
+                        <div class="space-y-6">
+                          <div>
+                            <h2 class="text-2xl font-bold leading-8 tracking-tight"><a class="text-gray-900 dark:text-gray-900" href="/blog/new-features-in-v1">New features in v1</a></h2>
+                            <div class="flex flex-wrap"><a class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="/tags/next-js">next-js</a><a class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="/tags/tailwind">tailwind</a><a class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 mr-3 text-sm font-medium uppercase" href="/tags/guide">guide</a></div>
+                          </div>
+                          <div class="prose max-w-none text-gray-500 dark:text-gray-400">An overview of the new features released in v1 - code block copy, multiple authors, frontmatter layout and more</div>
+                        </div>
+                        <div class="text-base font-medium leading-6"><a class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400" aria-label='Read "New features in v1"' href="/blog/new-features-in-v1">Read more →</a></div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </main>
+        </div>
+      </section>
+
 
       {/* <div className="relative min-h-screen bg-cover bg-slate-200 bg-no-repeat bg-fixed bg-center ">
         <div class="m-10"><h2 class="text-3xl font-normal text-gray-900">Latest Projects</h2></div>
