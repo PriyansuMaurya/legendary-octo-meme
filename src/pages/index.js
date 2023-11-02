@@ -32,16 +32,14 @@ const colors = [
   ["bg-[#FFD7FF]", "text-[#0404AC]", "border-[#0404AC]", "fill-[#0404AC]", "bg-[#0404AC]", "text-[#FFD7FF]", "hover:text-[#0404AC]"], // 20  4200
   ["bg-[#FFFFDB]", "text-[#005454]", "border-[#005454]", "fill-[#005454]", "bg-[#005454]", "text-[#FFFFDB]", "hover:text-[#005454]"], // 8   4240
 ];
-// [12, 14, 12, 12, 17, 16, 10, 13, 14, 15, 11, 11, 20, 8];
 
-const items = [
-  'There is so much left to build',
-];
+
 
 export default function Home() {
   const [colorIndex, setColorIndex] = useState(0);
   const el = React.useRef(null);
   const [navHidden, setNavHidden] = useState('-translate-y-full');
+  
   useEffect(() => {
     setTimeout(() => {
       setColorIndex((colorIndex + 1) % colors.length);
@@ -105,29 +103,40 @@ export default function Home() {
         <header className="... absolute top-0 right-2 bg-black-100">
           <div className="flex justify-end md:flex-1">
             <div className="mx-2 my-6 hidden  md:flex">
-              <button
-                type="button"
-                className={`flex items-center justify-center border font-medium text-sm px-3 py-1.5 mr-2 mb-2 text-dark ${colors[colorIndex][2]}  hover:text-blue-600`}
+              <a
+                href="https://priyansumaurya.github.io/public/Priyanshu_Maurya_Resume_01_08_2023.pdf"
+                target="_blank"
               >
-                <div className="">
-                  <span>Resume</span>
-                </div>
-                <div className="pl-1 ">
-                  {/* <BsArrowDown size={20} /> */}
-                  <PiArrowDownLight size={20} />
-                </div>
-              </button>
-              <button
-                type="button"
-                className={`flex items-center justify-center border font-medium text-sm px-3 py-1.5 mr-2 mb-2 text-dark ${colors[colorIndex][2]}  hover:text-blue-600`}
+                <button
+                  type="button"
+                  className={`flex items-center justify-center border font-medium text-sm px-3 py-1.5 mr-2 mb-2 text-dark ${colors[colorIndex][2]}  hover:text-blue-600`}
+                >
+                  <div className="">
+                    <span>Resume</span>
+                  </div>
+                  <div className="pl-1 ">
+                    {/* <BsArrowDown size={20} /> */}
+                    <PiArrowDownLight size={20} />
+                  </div>
+                </button>
+
+              </a>
+              <a
+                href="https://github.com/PriyansuMaurya"
+                target="_blank"
               >
-                <div className="">
-                  <span>GitHub</span>
-                </div>
-                <div className="pl-1">
-                  <PiArrowUpRightLight size={20} />
-                </div>
-              </button>
+                <button
+                  type="button"
+                  className={`flex items-center justify-center border font-medium text-sm px-3 py-1.5 mr-2 mb-2 text-dark ${colors[colorIndex][2]}  hover:text-blue-600`}
+                >
+                  <div className="">
+                    <span>GitHub</span>
+                  </div>
+                  <div className="pl-1">
+                    <PiArrowUpRightLight size={20} />
+                  </div>
+                </button>
+              </a>
             </div>
           </div>
 
@@ -136,19 +145,28 @@ export default function Home() {
           <button aria-label="Toggle Menu" className="md:hidden mr-8 px-4 py-1.5 mt-11 h-8 w-8" onClick={() => setNavHidden('-translate-y-0')}>
             <CiMenuFries size={35} />
           </button>
-          <div className={`fixed left-0 top-0 z-10 h-full w-full transform bg-grey-100 duration-300 ease-in-out dark:bg-slate-200 text-slate-900 opacity-95 ${navHidden}`}>
+          <div className={`md:hidden fixed left-0 top-0 z-10 h-full w-full transform bg-grey-100 duration-300 ease-in-out dark:bg-slate-950 text-slate-200 opacity-95 ${navHidden}`}>
             <div className=" pb-16 pt-14">
               <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:max-w-none">
-                  <div className="flex items-center justify-between text-slate-900 text-3xl">
-                    <a aria-label="Home" href="/"
-                    >PR_</a>
+                  <div className="flex items-center justify-between text-slate-200 text-3xl">
+                    <a
+                      aria-label="Home"
+                      href="https://priyansu.vercel.app/"
+                    >PRE</a>
                     <div className="flex items-center gap-x-8">
-                      <a className="inline-flex rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-neutral-950 transition hover:bg-neutral-200" href="/contact"><span className="relative top-px">Contact me</span></a
-                      ><button type="button" aria-expanded="true" aria-controls=":R5a:" className="group -m-2.5 rounded-full p-2.5 transition hover:bg-white/10" aria-label="Toggle navigation" onClick={() => setNavHidden('-translate-y-full')}>
-
+                      <a
+                        className="inline-flex rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-slate-950 transition hover:bg-neutral-200"
+                        href="/contact">
+                        <span className="relative top-px">Contact me</span>
+                      </a>
+                      <button
+                        type="button"
+                        aria-expanded="true"
+                        aria-controls=":R5a:"
+                        className="group -m-2.5 rounded-full p-2.5 transition hover:bg-white/10" aria-label="Toggle navigation"
+                        onClick={() => setNavHidden('-translate-y-full')}>
                         <TfiClose className="text-white-950" size={25} />
-
                       </button>
                     </div>
                   </div>
@@ -157,26 +175,42 @@ export default function Home() {
             </div>
 
             <nav className="font-display mt-px text-5xl font-medium tracking-tight">
-              <div className="sm:bg-neutral-950">
+              <div className="sm:bg-neutral-200">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                   <div className="mx-auto max-w-2xl lg:max-w-none">
                     <div className="grid grid-cols-1 sm:grid-cols-2">
-                      <a className="group relative isolate -mx-6 px-6 py-10 even:border border-t odd:border-slate-900 even:border-slate-900 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16" href="#about-me">About
+                      <a
+                        className="group relative isolate -mx-6 px-6 py-10 even:border-y border-t odd:border-slate-200 even:border-slate-200 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
+                        href="#about-me"
+                        onClick={() => setNavHidden('-translate-y-full')}
+                      >
+                        About
                         <span className="absolute inset-y-0 -z-10 w-screen transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span></a>
-                      <a className="group relative isolate -mx-6 px-6 py-10 even:border even:border-slate-900 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16" href="/about">Works
+                      <a
+                        className="group relative isolate -mx-6 px-6 py-10 even:border-y even:border-slate-200 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
+                        href="#works"
+                        onClick={() => setNavHidden('-translate-y-full')}
+                      >
+                        Works
                         <span className="absolute inset-y-0 -z-10 w-screen transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span></a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="sm:bg-neutral-950">
+              <div className="sm:bg-slate-950">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                   <div className="mx-auto max-w-2xl lg:max-w-none">
                     <div className="grid grid-cols-1 sm:grid-cols-2">
-                      <a className="group relative isolate -mx-6 px-6 py-10 even:border even:border-slate-900 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16" href="/process">Skills
+                      <a className="group relative isolate -mx-6 px-6 py-10 even:border-y even:border-slate-200 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-950 sm:even:pl-16" href="/process">Skills
                         <span className="absolute inset-y-0 -z-10 w-screen transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span></a>
-                      <a className="group relative isolate -mx-6 px-6 py-10 even:border even:border-slate-900 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16" href="/blog">Resume
-                        <span className="absolute inset-y-0 -z-10 w-screen transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span></a>
+                      <a
+                        className="group relative isolate -mx-6 px-6 py-10 even:border-y even:border-slate-200 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-950 sm:even:pl-16"
+                        href="https://priyansumaurya.github.io/public/Priyanshu_Maurya_Resume_01_08_2023.pdf"
+                        target="_blank"
+                      >
+                        Resume
+                        <span className="absolute inset-y-0 -z-10 w-screen transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -186,22 +220,22 @@ export default function Home() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-12">
                 <div className="sm:border-l sm:border-transparent sm:pl-16">
-                  <h2 className="font-display text-base font-semibold text-slate-950">Follow me</h2>
+                  <h2 className="font-display text-base font-semibold text-slate-200">Follow me</h2>
                   <ul role="list" className="mt-6 flex gap-x-10 text-white">
                     <li>
-                      <a aria-label="Instagram" className="transition hover:text-teal-400 text-slate-900" href="https://instagram.com"
+                      <a aria-label="Linkedin" className="transition hover:text-teal-400 text-slate-200" href="https://www.linkedin.com/in/priyanshu-maurya/"
                       >
                         <GrLinkedinOption size={25} />
                       </a>
                     </li>
                     <li>
-                      <a aria-label="Twitter" className="transition hover:text-teal-400 text-slate-900" href="https://twitter.com"
+                      <a aria-label="Twitter" className="transition hover:text-teal-400 text-slate-200" href="https://twitter.com/PrianshuMaurya"
                       >
                         <GrTwitter size={25} />
                       </a>
                     </li>
                     <li>
-                      <a aria-label="GitHub" className="transition hover:text-teal-400 text-slate-900" href="https://github.com"
+                      <a aria-label="GitHub" className="transition hover:text-teal-400 text-slate-200" href="https://github.com/PriyansuMaurya"
                       >
                         <GrGithub size={25} />
                       </a>
@@ -250,9 +284,13 @@ export default function Home() {
             Discover blog insights to aid your <br /><span class="text-primary">programming journey</span>
           </h1>
           <a
-            data-te-ripple-init data-te-ripple-color="light" href="#!" role="button">
+            data-te-ripple-init data-te-ripple-color="light"
+            href="https://priyansu-maurya.medium.com/"
+            role="button"
+            target="_blank"
+          >
             <button
-              class={`${colors[colorIndex][4]} ${colors[colorIndex][5]} border ${colors[colorIndex][2]} ${colors[colorIndex][6]} hover:bg-transparent  hover:text-slate-900 mb-2 inline-block  px-12 pt-4 pb-3.5 text-sm font-medium uppercase leading-normal md:mr-2 md:mb-0 transition duration-300 ease-in-out `}
+              class={`${colors[colorIndex][4]} ${colors[colorIndex][5]} border ${colors[colorIndex][2]} ${colors[colorIndex][6]} hover:bg-transparent mb-2 inline-block  px-12 pt-4 pb-3.5 text-sm font-medium uppercase leading-normal md:mr-2 md:mb-0 transition duration-300 ease-in-out `}
             >
               Start Reading
             </button>
@@ -265,7 +303,7 @@ export default function Home() {
 
       </div>
 
-      <section className="min-h-screen">
+      <section id="about-me" className="min-h-screen">
         <div className="mx-10 mt-10 flex justify-end"><h2 className="text-3xl font-normal text-gray-900">About me</h2></div>
         <div className="relative items-center w-full px-5 pt-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
           <div className="gap-12 lg:grid-cols-2 lg:grid">
@@ -282,14 +320,8 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="w-56 hidden absolute bottom-28 -left-10 ... bg-slate-300 border border-slate-500 rounded-r-full p-4 md:flex items-center justify-center ...">
-                <span className="mr-12 font-medium text-left	w-16 text-black">
-                  Located in the India
-                </span>
-                <div className="bg-white rounded-full p-4 flex items-center justify-center ...">
-                  <SlGlobe size={40} className="text-slate-900 rotate-12" />
-                </div>
-              </div>
+
+
             </div>
 
 
@@ -310,16 +342,32 @@ export default function Home() {
                         alt="Picture of the author"
                       />
                     </div>
-
                   </div>
-                  <h3 className="font-display mt-8 text-xl font-bold tracking-tight text-slate-900">Steven McHail</h3>
-                  <p className="mt-1 text-base tracking-tight text-slate-500">Designer at Globex Corporation</p>
                 </div>
-
-
               </div>
             </div>
           </div>
+
+          {/* // 'md': '768px',
+
+          // 'lg': '1024px',
+
+          // 'xl': '1280px',
+
+          // '2xl': '1536px', */}
+          {/* <div
+            class="absolute md:left-20 xl:left-[3rem] 2xl:left-0 lg:top-[32rem] xl:top-3/4  mt-8 lg:mt-10 transform -translate-y-1/2 w-8 h-24 text-white flex items-center justify-center"
+          >
+            <div className="w-56 hidden ... bg-slate-300 border border-slate-500 rounded-r-full p-4 lg:flex items-center justify-center ...">
+              <span className="mr-12 font-medium text-left	w-16 text-black">
+                Located in the India
+              </span>
+              <div className="bg-white rounded-full p-4 flex items-center justify-center ...">
+                <SlGlobe size={40} className="text-slate-900 rotate-12" />
+              </div>
+            </div>
+
+          </div> */}
         </div>
       </section>
 
@@ -328,44 +376,86 @@ export default function Home() {
       {/* projects */}
 
 
-      <section className="relative min-h-screen bg-cover border-t border-zinc-100 dark:border-zinc-700/40 bg-slate-200 bg-no-repeat bg-fixed bg-center ">
+      <section id="works" className="relative min-h-screen bg-cover border-t border-zinc-100 dark:border-zinc-700/40 bg-slate-200 bg-no-repeat bg-fixed bg-center ">
         <div className="mx-10 mt-12"><h2 className="text-3xl font-normal text-gray-900">Latest Projects</h2></div>
         <div className="relative mx-auto w-full max-w-7xl items-center px-5 py-12 md:px-12">
           <ol className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3" role="list">
             <li className="lgcol-span-2">
-              <a href="#">
+              <a
+                href="https://aifusion.vercel.app/"
+                target="_blank"
+              >
                 <div className="flex items-end justify-center">
                   <div className="flex overflow-hidden">
                     <div className="border h-96 w-96 border-gray-900 p-8 ">
-                      <h3 className="mt-6 font-light text-gray-900 text-[5rem]">AI FUSI ON</h3>
+                      <h3 className="mt-6 font-light text-gray-900 text-[5rem] hover:text-slate-500 transition duration-300 animate-ease-in-out">AI FUSI ON</h3>
                     </div>
                   </div>
                 </div>
               </a>
             </li>
             <li className="lgcol-span-2">
-              <a href="#">
+              <a
+                href="https://priyansumaurya.github.io/code-trio/"
+                target="_blank"
+              >
                 <div className="flex items-end justify-center">
                   <div className="flex overflow-hidden">
                     <div className="border h-96 w-96 border-gray-900 p-8">
-                      <h3 className="mt-6 font-light text-gray-900 text-[5rem]">CODE TRIO</h3>
+                      <h3 className="mt-6 font-light text-gray-900 text-[5rem] hover:text-slate-500 transition duration-300 animate-ease-in-out">CODE TRIO</h3>
                     </div>
                   </div>
                 </div>
               </a>
             </li>
             <li className="lgcol-span-2">
-              <a href="#">
+              <a
+                href="https://github.com/PriyansuMaurya/aliabdaal"
+                target="_blank"
+              >
                 <div className="flex items-end justify-center">
                   <div className="flex overflow-hidden">
                     <div className="border h-96 w-96 border-gray-900 p-8 ">
-                      <h3 className="mt-6 font-light text-gray-900 text-[5rem]">NEWS LETTER </h3>
+                      <h3 className="mt-6 font-light text-gray-900 text-[5rem] hover:text-slate-500 transition duration-300 animate-ease-in-out">NEWS LETTER </h3>
                     </div>
                   </div>
                 </div>
               </a>
             </li>
           </ol>
+        </div>
+      </section>
+
+
+      {/* marquee */}
+
+
+      <section class="flex w-full" id="experience">
+        <div class="pointer-events-none font-serif relative flex gap-10 overflow-hidden bg-slate-800 py-3 text-white">
+          <div class="flex min-w-full shrink-0 animate-marquee items-center justify-around gap-10">
+            <span class="mx-4 text-4xl font-extrabold">Let's work together </span>
+            <span class="text-4xl font-extrabold"> · </span>
+            <span class="mx-4 text-4xl font-extrabold"> Let's work together </span>
+            <span class="text-4xl font-extrabold"> · </span>
+            <span class="mx-4 text-4xl font-extrabold"> Let's work together </span>
+            <span class="text-4xl font-extrabold"> · </span>
+            <span class="mx-4 text-4xl font-extrabold"> Let's work together </span>
+            <span class="text-4xl font-extrabold"> · </span>
+            <span class="mx-4 text-4xl font-extrabold"> Let's work together </span>
+            <span class="text-4xl font-extrabold"> · </span>
+          </div>
+          <div aria-hidden="true" class="flex min-w-full shrink-0 animate-marquee items-center justify-around gap-10 text-white">
+            <span class="mx-4 text-4xl font-extrabold">Let's work together </span>
+            <span class="text-4xl font-extrabold"> · </span>
+            <span class="mx-4 text-4xl font-extrabold"> Let's work together </span>
+            <span class="text-4xl font-extrabold"> · </span>
+            <span class="mx-4 text-4xl font-extrabold"> Let's work together </span>
+            <span class="text-4xl font-extrabold"> · </span>
+            <span class="mx-4 text-4xl font-extrabold"> Let's work together </span>
+            <span class="text-4xl font-extrabold"> · </span>
+            <span class="mx-4 text-4xl font-extrabold"> Let's work together </span>
+            <span class="text-4xl font-extrabold"> · </span>
+          </div>
         </div>
       </section>
 
@@ -379,20 +469,23 @@ export default function Home() {
                   <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
                     <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
                       <a
-                        className="transition text-slate-900 dark:hover:text-teal-400"
-                        href="/projects"
+                        className="transition text-slate-900 dark:hover:text-slate-500"
+                        href="https://www.linkedin.com/in/priyanshu-maurya/"
+                        target="_blank"
                       >
                         <GrLinkedinOption size={25} />
                       </a>
                       <a
-                        className="transition text-slate-900 dark:hover:text-teal-400"
-                        href="/speaking"
+                        className="transition text-slate-900 dark:hover:text-slate-500"
+                        href="https://github.com/PriyansuMaurya"
+                        target="_blank"
                       >
                         <GrGithub size={25} />
                       </a>
                       <a
-                        className="transition text-slate-900 dark:hover:text-teal-400"
-                        href="/uses"
+                        className="transition text-slate-900 dark:hover:text-slate-500"
+                        href="https://twitter.com/PrianshuMaurya"
+                        target="_blank"
                       >
                         <GrTwitter size={25} />
                       </a>
