@@ -39,7 +39,7 @@ export default function Home() {
   const [colorIndex, setColorIndex] = useState(0);
   const el = React.useRef(null);
   const [navHidden, setNavHidden] = useState('-translate-y-full');
-  
+
   useEffect(() => {
     setTimeout(() => {
       setColorIndex((colorIndex + 1) % colors.length);
@@ -433,27 +433,27 @@ export default function Home() {
       <section class="flex w-full" id="experience">
         <div class="pointer-events-none font-serif relative flex gap-10 overflow-hidden bg-slate-800 py-3 text-white">
           <div class="flex min-w-full shrink-0 animate-marquee items-center justify-around gap-10">
-            <span class="mx-4 text-4xl font-extrabold">Let's work together </span>
+            <span class="mx-4 text-4xl font-extrabold">Let&apos;s work together </span>
             <span class="text-4xl font-extrabold"> · </span>
-            <span class="mx-4 text-4xl font-extrabold"> Let's work together </span>
+            <span class="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
             <span class="text-4xl font-extrabold"> · </span>
-            <span class="mx-4 text-4xl font-extrabold"> Let's work together </span>
+            <span class="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
             <span class="text-4xl font-extrabold"> · </span>
-            <span class="mx-4 text-4xl font-extrabold"> Let's work together </span>
+            <span class="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
             <span class="text-4xl font-extrabold"> · </span>
-            <span class="mx-4 text-4xl font-extrabold"> Let's work together </span>
+            <span class="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
             <span class="text-4xl font-extrabold"> · </span>
           </div>
           <div aria-hidden="true" class="flex min-w-full shrink-0 animate-marquee items-center justify-around gap-10 text-white">
-            <span class="mx-4 text-4xl font-extrabold">Let's work together </span>
+            <span class="mx-4 text-4xl font-extrabold">Let&apos;s work together </span>
             <span class="text-4xl font-extrabold"> · </span>
-            <span class="mx-4 text-4xl font-extrabold"> Let's work together </span>
+            <span class="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
             <span class="text-4xl font-extrabold"> · </span>
-            <span class="mx-4 text-4xl font-extrabold"> Let's work together </span>
+            <span class="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
             <span class="text-4xl font-extrabold"> · </span>
-            <span class="mx-4 text-4xl font-extrabold"> Let's work together </span>
+            <span class="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
             <span class="text-4xl font-extrabold"> · </span>
-            <span class="mx-4 text-4xl font-extrabold"> Let's work together </span>
+            <span class="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
             <span class="text-4xl font-extrabold"> · </span>
           </div>
         </div>
