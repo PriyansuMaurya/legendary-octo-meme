@@ -1,6 +1,6 @@
 // "use client";
 import Image from "next/image";
-import { Lora, Mulish } from "next/font/google";
+import { Lora, Mulish, Open_Sans, Assistant } from "next/font/google";
 import profile from "../../public/profile.jpg";
 import putty from "../../public/putty-title-md.png";
 import { GrLinkedinOption, GrTwitter, GrGithub } from "react-icons/gr";
@@ -15,6 +15,8 @@ import Typed from 'typed.js';
 
 const inter = Lora({ subsets: ["latin"] });
 const mulish = Mulish({ subsets: ["latin"] });
+const openSans = Open_Sans({ subsets: ["vietnamese"], weight: '300' });
+const assistant = Assistant({ subsets: ["hebrew"], weight: '400' });
 
 const colors = [
   ["bg-[#005454]", "text-[#FFFFDB]", "border-[#FFFFDB]", "fill-[#FFFFDB]", "bg-[#FFFFDB]", "text-[#005454]", "hover:text-[#FFFFDB]"], // 12  3500
@@ -39,7 +41,6 @@ export default function Home() {
   const [colorIndex, setColorIndex] = useState(0);
   const el = React.useRef(null);
   const [navHidden, setNavHidden] = useState('-translate-y-full');
-
   useEffect(() => {
     setTimeout(() => {
       setColorIndex((colorIndex + 1) % colors.length);
@@ -145,7 +146,7 @@ export default function Home() {
           <button aria-label="Toggle Menu" className="md:hidden mr-8 px-4 py-1.5 mt-11 h-8 w-8" onClick={() => setNavHidden('-translate-y-0')}>
             <CiMenuFries size={35} />
           </button>
-          <div className={`md:hidden fixed left-0 top-0 z-10 h-full w-full transform bg-grey-100 duration-300 ease-in-out dark:bg-slate-950 text-slate-200 opacity-95 ${navHidden}`}>
+          <div className={`md:hidden fixed left-0 top-0 z-10 h-full w-full transform bg-grey-100 duration-300 ease-in-out bg-slate-800 text-slate-200 ${navHidden}`}>
             <div className=" pb-16 pt-14">
               <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:max-w-none">
@@ -157,7 +158,7 @@ export default function Home() {
                     <div className="flex items-center gap-x-8">
                       <a
                         className="inline-flex rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-slate-950 transition hover:bg-neutral-200"
-                        href="/contact">
+                        href="mailto:pr17anshu@gmail.com">
                         <span className="relative top-px">Contact me</span>
                       </a>
                       <button
@@ -174,20 +175,20 @@ export default function Home() {
               </div>
             </div>
 
-            <nav className="font-display mt-px text-5xl font-medium tracking-tight">
+            <nav className={`font-display mt-px text-5xl font-mono font-semibold tracking-tight ${inter.className}`}>
               <div className="sm:bg-neutral-200">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                   <div className="mx-auto max-w-2xl lg:max-w-none">
                     <div className="grid grid-cols-1 sm:grid-cols-2">
                       <a
-                        className="group relative isolate -mx-6 px-6 py-10 even:border-y border-t odd:border-slate-200 even:border-slate-200 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
+                        className="group relative isolate -mx-6 px-6 py-8 even:border-y border-t odd:border-slate-200 even:border-slate-200 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
                         href="#about-me"
                         onClick={() => setNavHidden('-translate-y-full')}
                       >
                         About
                         <span className="absolute inset-y-0 -z-10 w-screen transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span></a>
                       <a
-                        className="group relative isolate -mx-6 px-6 py-10 even:border-y even:border-slate-200 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
+                        className="group relative isolate -mx-6 px-6 py-8 even:border-y even:border-slate-200 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
                         href="#works"
                         onClick={() => setNavHidden('-translate-y-full')}
                       >
@@ -201,13 +202,17 @@ export default function Home() {
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                   <div className="mx-auto max-w-2xl lg:max-w-none">
                     <div className="grid grid-cols-1 sm:grid-cols-2">
-                      <a className="group relative isolate -mx-6 px-6 py-10 even:border-y even:border-slate-200 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-950 sm:even:pl-16" href="/process">Skills
+                      <a 
+                      className="group relative isolate -mx-6 px-6 py-8 sm:py-12 even:border-y even:border-slate-200 sm:mx-0 sm:px-0 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-950 sm:even:pl-16" 
+                      href="#skills"
+                      onClick={() => setNavHidden('-translate-y-full')}>
+                        Skills
                         <span className="absolute inset-y-0 -z-10 w-screen transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span></a>
                       <a
-                        className="group relative isolate -mx-6 px-6 py-10 even:border-y even:border-slate-200 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-950 sm:even:pl-16"
+                        className="group relative isolate -mx-6 px-6 py-8 even:border-y even:border-slate-200 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-950 sm:even:pl-16"
                         href="https://priyansumaurya.github.io/public/Priyanshu_Maurya_Resume_01_08_2023.pdf"
                         target="_blank"
-                      >
+                        onClick={() => setNavHidden('-translate-y-full')}>
                         Resume
                         <span className="absolute inset-y-0 -z-10 w-screen transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span>
                       </a>
@@ -223,19 +228,19 @@ export default function Home() {
                   <h2 className="font-display text-base font-semibold text-slate-200">Follow me</h2>
                   <ul role="list" className="mt-6 flex gap-x-10 text-white">
                     <li>
-                      <a aria-label="Linkedin" className="transition hover:text-teal-400 text-slate-200" href="https://www.linkedin.com/in/priyanshu-maurya/"
+                      <a aria-label="Linkedin" className="transition md:hover:text-slate-500 text-slate-200" href="https://www.linkedin.com/in/priyanshu-maurya/"
                       >
                         <GrLinkedinOption size={25} />
                       </a>
                     </li>
                     <li>
-                      <a aria-label="Twitter" className="transition hover:text-teal-400 text-slate-200" href="https://twitter.com/PrianshuMaurya"
+                      <a aria-label="Twitter" className="transition md:hover:text-slate-500 text-slate-200" href="https://twitter.com/PrianshuMaurya"
                       >
                         <GrTwitter size={25} />
                       </a>
                     </li>
                     <li>
-                      <a aria-label="GitHub" className="transition hover:text-teal-400 text-slate-200" href="https://github.com/PriyansuMaurya"
+                      <a aria-label="GitHub" className="transition md:hover:text-slate-500 text-slate-200" href="https://github.com/PriyansuMaurya"
                       >
                         <GrGithub size={25} />
                       </a>
@@ -304,13 +309,13 @@ export default function Home() {
       </div>
 
       <section id="about-me" className="min-h-screen">
-        <div className="mx-10 mt-10 flex justify-end"><h2 className="text-3xl font-normal text-gray-900">About me</h2></div>
+        <div className="mx-10 mt-10 flex justify-end"><h2 className={`text-3xl font-normal text-gray-900 ${assistant.className}`}>About me</h2></div>
         <div className="relative items-center w-full px-5 pt-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
           <div className="gap-12 lg:grid-cols-2 lg:grid">
             <div>
               <div className="max-w-xl">
                 <div>
-                  <p className="text-3xl font-light tracking-tight text-black mb-3">
+                  <p className={`text-2xl md:text-3xl 2xl:text-4xl font-thin tracking-tight text-slate-900 mb-3 ${openSans.className}`}>
                     I am a Software developer based on Mumbai, I have launched an open-source
                     project that received 2000+ visits in just 2 days, and people
                     appreciated its simple UI. I led a team of 2 to complete the project
@@ -333,7 +338,7 @@ export default function Home() {
                     <div className="absolute inset-0 bg-indigo-50" >
 
                       <Image
-                        className="absolute h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        className="absolute h-full w-full object-cover transition duration-500 md:group-hover:scale-105"
                         src={profile}
                         priority={true}
                         width={1120}
@@ -376,8 +381,8 @@ export default function Home() {
       {/* projects */}
 
 
-      <section id="works" className="relative min-h-screen bg-cover border-t border-zinc-100 dark:border-zinc-700/40 bg-slate-200 bg-no-repeat bg-fixed bg-center ">
-        <div className="mx-10 mt-12"><h2 className="text-3xl font-normal text-gray-900">Latest Projects</h2></div>
+      <section id="works" className="relative min-h-screen bg-cover border-t border-zinc-100 border-zinc-700/40 bg-slate-200 bg-no-repeat bg-fixed bg-center ">
+        <div className="mx-10 mt-12"><h2 className={`text-3xl font-normal text-gray-900 ${assistant.className}`}>Latest Projects</h2></div>
         <div className="relative mx-auto w-full max-w-7xl items-center px-5 py-12 md:px-12">
           <ol className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3" role="list">
             <li className="lgcol-span-2">
@@ -388,7 +393,7 @@ export default function Home() {
                 <div className="flex items-end justify-center">
                   <div className="flex overflow-hidden">
                     <div className="border h-96 w-96 border-gray-900 p-8 ">
-                      <h3 className="mt-6 font-light text-gray-900 text-[5rem] hover:text-slate-500 transition duration-300 animate-ease-in-out">AI FUSI ON</h3>
+                      <h3 className="mt-6 font-light text-gray-900 text-[5rem] md:hover:text-slate-500 transition duration-300 animate-ease-in-out">AI FUSI ON</h3>
                     </div>
                   </div>
                 </div>
@@ -402,7 +407,7 @@ export default function Home() {
                 <div className="flex items-end justify-center">
                   <div className="flex overflow-hidden">
                     <div className="border h-96 w-96 border-gray-900 p-8">
-                      <h3 className="mt-6 font-light text-gray-900 text-[5rem] hover:text-slate-500 transition duration-300 animate-ease-in-out">CODE TRIO</h3>
+                      <h3 className="mt-6 font-light text-gray-900 text-[5rem] md:hover:text-slate-500 transition duration-300 animate-ease-in-out">CODE TRIO</h3>
                     </div>
                   </div>
                 </div>
@@ -416,7 +421,7 @@ export default function Home() {
                 <div className="flex items-end justify-center">
                   <div className="flex overflow-hidden">
                     <div className="border h-96 w-96 border-gray-900 p-8 ">
-                      <h3 className="mt-6 font-light text-gray-900 text-[5rem] hover:text-slate-500 transition duration-300 animate-ease-in-out">NEWS LETTER </h3>
+                      <h3 className="mt-6 font-light text-gray-900 text-[5rem] md:hover:text-slate-500 transition duration-300 animate-ease-in-out">NEWS LETTER </h3>
                     </div>
                   </div>
                 </div>
@@ -431,7 +436,7 @@ export default function Home() {
 
 
       <section class="flex w-full" id="experience">
-        <div class="pointer-events-none font-serif relative flex gap-10 overflow-hidden bg-slate-800 py-3 text-white">
+        <div class={`pointer-events-none font-serif relative flex gap-10 overflow-hidden bg-slate-800 py-3 text-white ${inter.className}`}>
           <div class="flex min-w-full shrink-0 animate-marquee items-center justify-around gap-10">
             <span class="mx-4 text-4xl font-extrabold">Let&apos;s work together </span>
             <span class="text-4xl font-extrabold"> · </span>
@@ -463,34 +468,34 @@ export default function Home() {
         <div className="sm:px-8">
           {/* <div className="mx-auto w-full max-w-7xl lg:px-8"> */}
           <div className="mx-auto w-full">
-            <div className="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
+            <div className="border-t border-zinc-100 pb-16 pt-10   border-zinc-700/40">
               <div className="relative px-4 sm:px-8 lg:px-12">
                 <div className="mx-auto max-w-2xl lg:max-w-5xl">
                   <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-                    <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                    <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800   text-zinc-200">
                       <a
-                        className="transition text-slate-900 dark:hover:text-slate-500"
+                        className="transition text-slate-900   md:hover:text-slate-500"
                         href="https://www.linkedin.com/in/priyanshu-maurya/"
                         target="_blank"
                       >
                         <GrLinkedinOption size={25} />
                       </a>
                       <a
-                        className="transition text-slate-900 dark:hover:text-slate-500"
+                        className="transition text-slate-900   md:hover:text-slate-500"
                         href="https://github.com/PriyansuMaurya"
                         target="_blank"
                       >
                         <GrGithub size={25} />
                       </a>
                       <a
-                        className="transition text-slate-900 dark:hover:text-slate-500"
+                        className="transition text-slate-900   md:hover:text-slate-500"
                         href="https://twitter.com/PrianshuMaurya"
                         target="_blank"
                       >
                         <GrTwitter size={25} />
                       </a>
                     </div>
-                    <p className="text-sm text-zinc-400 dark:text-zinc-500">
+                    <p className="text-sm text-zinc-400   text-zinc-500">
                       © Priyanshu Maurya. All rights reserved.
                     </p>
                   </div>
