@@ -160,7 +160,8 @@ export default function Home() {
                           href="https://priyansu.vercel.app/"
                         >PRE</a>
                         <div className="flex items-center gap-x-8">
-                          <a className="inline-flex rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-200" href="mailto:pr17anshu@gmail.com"><span className="relative top-px">Contact us</span></a
+                          <a className="inline-flex rounded-full bg-white px-4 py-1.5 text-sm font-semi
+                            bold text-slate-900 transition hover:bg-slate-200" href="mailto:pr17anshu@gmail.com"><span className="relative top-px">Contact me</span></a
                           ><button
                             type="button"
                             aria-expanded="true"
@@ -226,7 +227,7 @@ export default function Home() {
                     <div className="mx-auto max-w-2xl lg:max-w-none">
                       <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
                         <div className="sm:border-l sm:border-transparent sm:pl-16">
-                          <h2 className="font-display text-base font-semibold text-white">Follow us</h2>
+                          <h2 className="font-display text-base font-semibold text-white">Follow me</h2>
                           <ul role="list" className="mt-6 flex gap-x-10 text-white">
                             <li>
                               <a aria-label="Facebook" className="transition hover:text-slate-200"
