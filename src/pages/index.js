@@ -40,7 +40,7 @@ const colors = [
 export default function Home() {
   const [colorIndex, setColorIndex] = useState(0);
   const el = React.useRef(null);
-  const [navHidden, setNavHidden] = useState('-translate-y-full');
+  const [navHidden, setNavHidden] = useState('-translate-y-[180%]');
   useEffect(() => {
     setTimeout(() => {
       setColorIndex((colorIndex + 1) % colors.length);
@@ -110,7 +110,7 @@ export default function Home() {
               >
                 <button
                   type="button"
-                  className={`flex items-center justify-center border font-medium text-sm px-3 py-1.5 mr-2 mb-2 text-dark ${colors[colorIndex][2]}  hover:text-blue-600`}
+                  className={`flex items-center justify-center border font-medium md:text-base lg:text-sm lg:px-3 lg:py-1.5 md:px-4 md:py-2 mr-2 mb-2 md:mr-3 md:mb-3  text-dark ${colors[colorIndex][2]}  hover:text-blue-600`}
                 >
                   <div className="">
                     <span>Resume</span>
@@ -128,7 +128,7 @@ export default function Home() {
               >
                 <button
                   type="button"
-                  className={`flex items-center justify-center border font-medium text-sm px-3 py-1.5 mr-2 mb-2 text-dark ${colors[colorIndex][2]}  hover:text-blue-600`}
+                  className={`flex items-center justify-center border font-medium md:text-base lg:text-sm lg:px-3 lg:py-1.5 md:px-4 md:py-2 mr-2 mb-2 md:mr-3 md:mb-3  text-dark ${colors[colorIndex][2]}  hover:text-blue-600`}
                 >
                   <div className="">
                     <span>GitHub</span>
@@ -146,116 +146,121 @@ export default function Home() {
           <button aria-label="Toggle Menu" className="md:hidden mr-8 px-4 py-1.5 mt-11 h-8 w-8" onClick={() => setNavHidden('-translate-y-0')}>
             <CiMenuFries size={35} />
           </button>
-          <div className={`md:hidden fixed left-0 top-0 z-10 h-full w-full transform bg-grey-100 duration-300 ease-in-out bg-slate-800 text-slate-200 ${navHidden}`}>
-            <div className=" pb-16 pt-14">
-              <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto max-w-2xl lg:max-w-none">
-                  <div className="flex items-center justify-between text-slate-200 text-3xl">
-                    <a
-                      aria-label="Home"
-                      href="https://priyansu.vercel.app/"
-                    >PRE</a>
-                    <div className="flex items-center gap-x-8">
-                      <a
-                        className="inline-flex rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-slate-950 transition hover:bg-neutral-200"
-                        href="mailto:pr17anshu@gmail.com">
-                        <span className="relative top-px">Contact me</span>
-                      </a>
-                      <button
-                        type="button"
-                        aria-expanded="true"
-                        aria-controls=":R5a:"
-                        className="group -m-2.5 rounded-full p-2.5 transition hover:bg-white/10" aria-label="Toggle navigation"
-                        onClick={() => setNavHidden('-translate-y-full')}>
-                        <TfiClose className="text-white-950" size={25} />
-                      </button>
+          <div className={`md:hidden fixed left-0 top-0 z-10 h-full w-full transform bg-grey-100 duration-300 ease-in-out bg-slate-900 text-slate-200 ${navHidden}`}>
+
+
+            <div id=":R5a:" className="relative z-50 overflow-hidden bg-slate-900 pt-2">
+              <div className="bg-slate-700">
+                <div className="bg-slate-900 pb-16 pt-14">
+                  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div className="mx-auto max-w-2xl lg:max-w-none">
+                      <div className="flex items-center justify-between text-slate-200 text-3xl">
+                        <a
+                          aria-label="Home"
+                          href="https://priyansu.vercel.app/"
+                        >PRE</a>
+                        <div className="flex items-center gap-x-8">
+                          <a className="inline-flex rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-200" href="mailto:pr17anshu@gmail.com"><span className="relative top-px">Contact us</span></a
+                          ><button
+                            type="button"
+                            aria-expanded="true"
+                            aria-controls=":R5a:"
+                            className="group -m-2.5 rounded-full p-2.5 transition hover:bg-white/10" aria-label="Toggle navigation"
+                            onClick={() => setNavHidden('-translate-y-[180%]')}>
+                            <TfiClose className="text-white-950" size={25} />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <nav className={`font-display mt-px text-5xl font-medium tracking-tight text-white ${inter.className}`}>
+                  <div className="even:mt-px sm:bg-slate-900">
+                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                      <div className="mx-auto max-w-2xl lg:max-w-none">
+                        <div className="grid grid-cols-1 sm:grid-cols-2">
+                          <a
+                            className="group relative isolate -mx-6 bg-slate-900 px-6 py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
+                            href="#about-me"
+                            onClick={() => setNavHidden('-translate-y-[180%]')}
+                          >
+                            About
+                            <span className="absolute inset-y-0 -z-10 w-screen bg-slate-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span
+                            ></a>
+                          <a
+                            className="group relative isolate -mx-6 bg-slate-900 px-6 py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
+                            href="#works"
+                            onClick={() => setNavHidden('-translate-y-[180%]')}
+                          >
+                            Works
+                            <span className="absolute inset-y-0 -z-10 w-screen bg-slate-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="even:mt-px sm:bg-slate-900">
+                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                      <div className="mx-auto max-w-2xl lg:max-w-none">
+                        <div className="grid grid-cols-1 sm:grid-cols-2">
+                          <a
+                            className="group relative isolate -mx-6 bg-slate-900 px-6 py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
+                            href="#skills"
+                            onClick={() => setNavHidden('-translate-y-[180%]')}>
+                            Skills
+                            <span
+                              className="absolute inset-y-0 -z-10 w-screen bg-slate-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span
+                            ></a>
+                          <a className="group relative isolate -mx-6 bg-slate-900 px-6 py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
+                            href="https://priyansumaurya.github.io/public/Priyanshu_Maurya_Resume_01_08_2023.pdf"
+                            target="_blank"
+                            onClick={() => setNavHidden('-translate-y-[180%]')}>
+                            Resume
+                            <span className="absolute inset-y-0 -z-10 w-screen bg-slate-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+                <div className="relative bg-slate-900 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-slate-700">
+                  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div className="mx-auto max-w-2xl lg:max-w-none">
+                      <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
+                        <div className="sm:border-l sm:border-transparent sm:pl-16">
+                          <h2 className="font-display text-base font-semibold text-white">Follow us</h2>
+                          <ul role="list" className="mt-6 flex gap-x-10 text-white">
+                            <li>
+                              <a aria-label="Facebook" className="transition hover:text-slate-200"
+                                href="https://www.linkedin.com/in/priyanshu-maurya/"
+                              >
+                                <GrLinkedinOption size={25} />
+                              </a>
+                            </li>
+                            <li>
+                              <a aria-label="Twitter" className="transition hover:text-slate-200"
+                                href="https://twitter.com/PrianshuMaurya"
+                              >
+                                <GrTwitter size={25} />
+                              </a>
+                            </li>
+                            <li>
+                              <a aria-label="GitHub" className="transition hover:text-slate-200"
+                                href="https://github.com/PriyansuMaurya"
+                              >
+                                <GrGithub size={25} />
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <nav className={`font-display mt-px text-5xl font-mono font-semibold tracking-tight ${inter.className}`}>
-              <div className="sm:bg-neutral-200">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                  <div className="mx-auto max-w-2xl lg:max-w-none">
-                    <div className="grid grid-cols-1 sm:grid-cols-2">
-                      <a
-                        className="group relative isolate -mx-6 px-6 py-8 even:border-y border-t odd:border-slate-200 even:border-slate-200 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
-                        href="#about-me"
-                        onClick={() => setNavHidden('-translate-y-full')}
-                      >
-                        About
-                        <span className="absolute inset-y-0 -z-10 w-screen transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span></a>
-                      <a
-                        className="group relative isolate -mx-6 px-6 py-8 even:border-y even:border-slate-200 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
-                        href="#works"
-                        onClick={() => setNavHidden('-translate-y-full')}
-                      >
-                        Works
-                        <span className="absolute inset-y-0 -z-10 w-screen transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="sm:bg-slate-950">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                  <div className="mx-auto max-w-2xl lg:max-w-none">
-                    <div className="grid grid-cols-1 sm:grid-cols-2">
-                      <a 
-                      className="group relative isolate -mx-6 px-6 py-8 sm:py-12 even:border-y even:border-slate-200 sm:mx-0 sm:px-0 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-950 sm:even:pl-16" 
-                      href="#skills"
-                      onClick={() => setNavHidden('-translate-y-full')}>
-                        Skills
-                        <span className="absolute inset-y-0 -z-10 w-screen transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span></a>
-                      <a
-                        className="group relative isolate -mx-6 px-6 py-8 even:border-y even:border-slate-200 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-950 sm:even:pl-16"
-                        href="https://priyansumaurya.github.io/public/Priyanshu_Maurya_Resume_01_08_2023.pdf"
-                        target="_blank"
-                        onClick={() => setNavHidden('-translate-y-full')}>
-                        Resume
-                        <span className="absolute inset-y-0 -z-10 w-screen transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </nav>
-
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-12">
-                <div className="sm:border-l sm:border-transparent sm:pl-16">
-                  <h2 className="font-display text-base font-semibold text-slate-200">Follow me</h2>
-                  <ul role="list" className="mt-6 flex gap-x-10 text-white">
-                    <li>
-                      <a aria-label="Linkedin" className="transition md:hover:text-slate-500 text-slate-200" href="https://www.linkedin.com/in/priyanshu-maurya/"
-                      >
-                        <GrLinkedinOption size={25} />
-                      </a>
-                    </li>
-                    <li>
-                      <a aria-label="Twitter" className="transition md:hover:text-slate-500 text-slate-200" href="https://twitter.com/PrianshuMaurya"
-                      >
-                        <GrTwitter size={25} />
-                      </a>
-                    </li>
-                    <li>
-                      <a aria-label="GitHub" className="transition md:hover:text-slate-500 text-slate-200" href="https://github.com/PriyansuMaurya"
-                      >
-                        <GrGithub size={25} />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-
-
 
           </div>
 
-        </header>
+        </header >
         {/* ${colors[colorIndex][0]} */}
         {/* <div className="bg-red-100 w-20 h-10"></div> */}
         {/* ${colors[colorIndex][1]} */}
@@ -306,7 +311,7 @@ export default function Home() {
 
 
 
-      </div>
+      </div >
 
       <section id="about-me" className="min-h-screen">
         <div className="mx-10 mt-10 flex justify-end"><h2 className={`text-3xl font-normal text-gray-900 ${assistant.className}`}>About me</h2></div>
@@ -315,13 +320,8 @@ export default function Home() {
             <div>
               <div className="max-w-xl">
                 <div>
-                  <p className={`text-2xl md:text-3xl 2xl:text-4xl font-thin tracking-tight text-slate-900 mb-3 ${openSans.className}`}>
-                    I am a Software developer based on Mumbai, I have launched an open-source
-                    project that received 2000+ visits in just 2 days, and people
-                    appreciated its simple UI. I led a team of 2 to complete the project
-                    on time. My interests lie in front-end development, UI/UX, and
-                    Machine learning. Moreover, I actively share useful content on
-                    LinkedIn and Twitter to help others.
+                  <p className={`text-xl sm:text-2xl md:text-3xl 2xl:text-4xl font-thin tracking-tight text-slate-900 mb-3 ${openSans.className}`}>
+                    Hello! I am Priyanshu, a Software Developer based in Mumbai. I have launched an open-source project that received 2000+ visits in just 2 days, and people appreciated its simple UI. I led a team of 2 to complete the project on time. My interests lie in front-end development, UI/UX, and Machine Learning. Moreover, I actively share useful content on LinkedIn and Twitter to help others.
                   </p>
                 </div>
               </div>
@@ -330,7 +330,7 @@ export default function Home() {
             </div>
 
 
-            <div className="my-2 max-w-[700px] overflow-hidden">
+            <div className="my-8 sm:my-12 md:my-2 max-w-[700px] overflow-hidden">
               <div className="max-w-[1200px] max-h-[600px] overflow-hidden">
                 <div>
                   <div className="rounded-4xl group relative h-80 sm:h-[20rem] md:h-96 transform overflow-hidden">
@@ -495,7 +495,7 @@ export default function Home() {
                         <GrTwitter size={25} />
                       </a>
                     </div>
-                    <p className="text-sm text-zinc-400   text-zinc-500">
+                    <p className="text-sm text-slate-400">
                       © Priyanshu Maurya. All rights reserved.
                     </p>
                   </div>
