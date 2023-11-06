@@ -181,7 +181,7 @@ export default function Home() {
                       <div className="mx-auto max-w-2xl lg:max-w-none">
                         <div className="grid grid-cols-1 sm:grid-cols-2">
                           <a
-                            className="group relative isolate -mx-6 bg-slate-900 px-6 py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
+                            className="group relative isolate -mx-6 bg-slate-900 px-6 py-7 md:py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
                             href="#about-me"
                             onClick={() => setNavHidden('-translate-y-[180%]')}
                           >
@@ -189,7 +189,7 @@ export default function Home() {
                             <span className="absolute inset-y-0 -z-10 w-screen bg-slate-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span
                             ></a>
                           <a
-                            className="group relative isolate -mx-6 bg-slate-900 px-6 py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
+                            className="group relative isolate -mx-6 bg-slate-900 px-6 py-7 md:py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
                             href="#works"
                             onClick={() => setNavHidden('-translate-y-[180%]')}
                           >
@@ -204,14 +204,14 @@ export default function Home() {
                       <div className="mx-auto max-w-2xl lg:max-w-none">
                         <div className="grid grid-cols-1 sm:grid-cols-2">
                           <a
-                            className="group relative isolate -mx-6 bg-slate-900 px-6 py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
+                            className="group relative isolate -mx-6 bg-slate-900 px-6 py-7 md:py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
                             href="#skills"
                             onClick={() => setNavHidden('-translate-y-[180%]')}>
                             Skills
                             <span
                               className="absolute inset-y-0 -z-10 w-screen bg-slate-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span
                             ></a>
-                          <a className="group relative isolate -mx-6 bg-slate-900 px-6 py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
+                          <a className="group relative isolate -mx-6 bg-slate-900 px-6 py-7 md:py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
                             href="https://priyansumaurya.github.io/public/Priyanshu_Maurya_Resume_01_08_2023.pdf"
                             target="_blank"
                             onClick={() => setNavHidden('-translate-y-[180%]')}>
@@ -393,7 +393,8 @@ export default function Home() {
               >
                 <div className="flex items-end justify-center">
                   <div className="flex overflow-hidden">
-                    <div className="border h-96 w-96 border-gray-900 p-8 ">
+                    <div className="border h-96 w-96 border-gray-900 p-6 md:p-8
+ ">
                       <h3 className="mt-6 font-light text-gray-900 text-[5rem] md:hover:text-slate-500 transition duration-300 animate-ease-in-out">AI FUSI ON</h3>
                     </div>
                   </div>
@@ -407,7 +408,8 @@ export default function Home() {
               >
                 <div className="flex items-end justify-center">
                   <div className="flex overflow-hidden">
-                    <div className="border h-96 w-96 border-gray-900 p-8">
+                    <div className="border h-96 w-96 border-gray-900 p-6 md:p-8
+">
                       <h3 className="mt-6 font-light text-gray-900 text-[5rem] md:hover:text-slate-500 transition duration-300 animate-ease-in-out">CODE TRIO</h3>
                     </div>
                   </div>
@@ -421,7 +423,8 @@ export default function Home() {
               >
                 <div className="flex items-end justify-center">
                   <div className="flex overflow-hidden">
-                    <div className="border h-96 w-96 border-gray-900 p-8 ">
+                    <div className="border h-96 w-96 border-gray-900 p-6 md:p-8
+ ">
                       <h3 className="mt-6 font-light text-gray-900 text-[5rem] md:hover:text-slate-500 transition duration-300 animate-ease-in-out">NEWS LETTER </h3>
                     </div>
                   </div>
