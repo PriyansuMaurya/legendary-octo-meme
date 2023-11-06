@@ -393,9 +393,9 @@ export default function Home() {
               >
                 <div className="flex items-end justify-center">
                   <div className="flex overflow-hidden">
-                    <div className="border h-96 w-96 border-gray-900 p-6 md:p-8
+                    <div className="border h-96 w-96 border-slate-950 p-6 md:p-8
  ">
-                      <h3 className="mt-6 font-light text-gray-900 text-[5rem] md:hover:text-slate-500 transition duration-300 animate-ease-in-out">AI FUSI ON</h3>
+                      <h3 className="font-light text-slate-900 text-[5rem] md:text-8xl md:hover:text-slate-500 transition duration-300 animate-ease-in-out">AI FUSI ON</h3>
                     </div>
                   </div>
                 </div>
@@ -408,9 +408,9 @@ export default function Home() {
               >
                 <div className="flex items-end justify-center">
                   <div className="flex overflow-hidden">
-                    <div className="border h-96 w-96 border-gray-900 p-6 md:p-8
+                    <div className="border h-96 w-96 border-slate-950 p-6 md:p-8
 ">
-                      <h3 className="mt-6 font-light text-gray-900 text-[5rem] md:hover:text-slate-500 transition duration-300 animate-ease-in-out">CODE TRIO</h3>
+                      <h3 className="font-light text-slate-900 text-[5rem] md:text-8xl md:hover:text-slate-500 transition duration-300 animate-ease-in-out">CODE TRIO</h3>
                     </div>
                   </div>
                 </div>
@@ -423,9 +423,9 @@ export default function Home() {
               >
                 <div className="flex items-end justify-center">
                   <div className="flex overflow-hidden">
-                    <div className="border h-96 w-96 border-gray-900 p-6 md:p-8
+                    <div className="border h-96 w-96 border-slate-950 p-6 md:p-8
  ">
-                      <h3 className="mt-6 font-light text-gray-900 text-[5rem] md:hover:text-slate-500 transition duration-300 animate-ease-in-out">NEWS LETTER </h3>
+                      <h3 className="font-light text-slate-900 text-[5rem] md:text-8xl md:hover:text-slate-500 transition duration-300 animate-ease-in-out">NEWS LETT ER </h3>
                     </div>
                   </div>
                 </div>
