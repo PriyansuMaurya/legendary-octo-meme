@@ -5,7 +5,12 @@ import profile from "../../public/profile.jpg";
 import putty from "../../public/putty-title-md.png";
 import { GrLinkedinOption, GrTwitter, GrGithub } from "react-icons/gr";
 import { PiArrowDownLight, PiArrowUpRightLight } from "react-icons/pi";
+import { MdArrowForwardIos } from "react-icons/md";
 import { CiMenuFries } from "react-icons/ci";
+import { FaReact, FaPython, FaDocker, FaNodeJs, FaFigma, FaLinux, FaJava, FaGit, FaGithub } from "react-icons/fa";
+import { SiFlask, SiMysql } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import { DiNodejs } from "react-icons/di";
 import { TfiClose } from "react-icons/tfi";
 import { SlGlobe } from "react-icons/sl";
 import React, { useState, useEffect } from "react";
@@ -48,7 +53,7 @@ export default function Home() {
   }, [colorIndex]);
 
   return (
-    <div className="scroll-smooth	min-h-screen flex flex-col bg-slate-200 ">
+    <div className="scroll-smooth	min-h-screen flex flex-col bg-slate-200 selection:bg-green-200">
       <svg className={`absolute ${colors[colorIndex][3]} m-5 w-32 sm:w-40 text-xl animate-spin animate-infinite animate-duration-[6000ms] animate-delay-[6000ms] animate-ease-linear animate-normal animate-fill-forwards`}
         width="150" height="150" viewBox="0 0 208 208" fill="" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -110,7 +115,7 @@ export default function Home() {
               >
                 <button
                   type="button"
-                  className={`flex items-center justify-center border font-medium md:text-base lg:text-sm lg:px-3 lg:py-1.5 md:px-4 md:py-2 mr-2 mb-2 md:mr-3 md:mb-3  text-dark ${colors[colorIndex][2]}  hover:text-blue-600`}
+                  className={`flex items-center justify-center border font-medium md:text-base lg:text-sm lg:px-3 lg:py-1.5 md:px-4 md:py-2 mr-2 mb-2 md:mr-3 md:mb-3  text-dark ${colors[colorIndex][2]}  hover:text-slate-800`}
                 >
                   <div className="">
                     <span>Resume</span>
@@ -128,7 +133,7 @@ export default function Home() {
               >
                 <button
                   type="button"
-                  className={`flex items-center justify-center border font-medium md:text-base lg:text-sm lg:px-3 lg:py-1.5 md:px-4 md:py-2 mr-2 mb-2 md:mr-3 md:mb-3  text-dark ${colors[colorIndex][2]}  hover:text-blue-600`}
+                  className={`flex items-center justify-center border font-medium md:text-base lg:text-sm lg:px-3 lg:py-1.5 md:px-4 md:py-2 mr-2 mb-2 md:mr-3 md:mb-3  text-dark ${colors[colorIndex][2]}  hover:text-slate-800`}
                 >
                   <div className="">
                     <span>GitHub</span>
@@ -181,7 +186,7 @@ export default function Home() {
                       <div className="mx-auto max-w-2xl lg:max-w-none">
                         <div className="grid grid-cols-1 sm:grid-cols-2">
                           <a
-                            className="group relative isolate -mx-6 bg-slate-900 px-6 py-7 md:py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
+                            className="group relative isolate -mx-6 bg-slate-900 px-6 py-[9%] md:py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
                             href="#about-me"
                             onClick={() => setNavHidden('-translate-y-[180%]')}
                           >
@@ -189,7 +194,7 @@ export default function Home() {
                             <span className="absolute inset-y-0 -z-10 w-screen bg-slate-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span
                             ></a>
                           <a
-                            className="group relative isolate -mx-6 bg-slate-900 px-6 py-7 md:py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
+                            className="group relative isolate -mx-6 bg-slate-900 px-6 py-[9%] md:py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
                             href="#works"
                             onClick={() => setNavHidden('-translate-y-[180%]')}
                           >
@@ -204,14 +209,14 @@ export default function Home() {
                       <div className="mx-auto max-w-2xl lg:max-w-none">
                         <div className="grid grid-cols-1 sm:grid-cols-2">
                           <a
-                            className="group relative isolate -mx-6 bg-slate-900 px-6 py-7 md:py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
+                            className="group relative isolate -mx-6 bg-slate-900 px-6 py-[9%] md:py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
                             href="#skills"
                             onClick={() => setNavHidden('-translate-y-[180%]')}>
                             Skills
                             <span
                               className="absolute inset-y-0 -z-10 w-screen bg-slate-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span
                             ></a>
-                          <a className="group relative isolate -mx-6 bg-slate-900 px-6 py-7 md:py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
+                          <a className="group relative isolate -mx-6 bg-slate-900 px-6 py-[9%] md:py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
                             href="https://priyansumaurya.github.io/public/Priyanshu_Maurya_Resume_01_08_2023.pdf"
                             target="_blank"
                             onClick={() => setNavHidden('-translate-y-[180%]')}>
@@ -265,7 +270,7 @@ export default function Home() {
         {/* ${colors[colorIndex][0]} */}
         {/* <div className="bg-red-100 w-20 h-10"></div> */}
         {/* ${colors[colorIndex][1]} */}
-        {/* <img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&weight=600&size=84&duration=3500&pause=1000&color=${colors[colorIndex][1]}&center=true&vCenter=true&random=false&width=800&height=150&lines=Let%E2%80%99s+invent;Let%E2%80%99s+discover;Let%E2%80%99s+design;Let%E2%80%99s+create;Let%E2%80%99s+collaborate;Let%E2%80%99s+experiment;Let%E2%80%99s+fail;Let%E2%80%99s+iterate;Let%E2%80%99s+innovate;Let%E2%80%99s+prototype;Let%E2%80%99s+learn;Let%E2%80%99s+adapt;Let%E2%80%99s+make+an+impact;Let%E2%80%99s+go" alt="Typing SVG" /> */}
+        {/* <Image src="https://readme-typing-svg.demolab.com?font=Playfair+Display&weight=600&size=84&duration=3500&pause=1000&color=${colors[colorIndex][1]}&center=true&vCenter=true&random=false&width=800&height=150&lines=Let%E2%80%99s+invent;Let%E2%80%99s+discover;Let%E2%80%99s+design;Let%E2%80%99s+create;Let%E2%80%99s+collaborate;Let%E2%80%99s+experiment;Let%E2%80%99s+fail;Let%E2%80%99s+iterate;Let%E2%80%99s+innovate;Let%E2%80%99s+prototype;Let%E2%80%99s+learn;Let%E2%80%99s+adapt;Let%E2%80%99s+make+an+impact;Let%E2%80%99s+go" alt="Typing SVG" /> */}
         {/* <div className="my-32 mx-auto mt-96 max-w-7xl px-6 sm:mt-32 md:mt-56 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="max-w-3xl">
@@ -290,9 +295,9 @@ export default function Home() {
         // 'xl': '1280px',
 
         // '2xl': '1536px', */}
-        <div class="pt-72 px-6 xl:pt-72 2xl:pt-80 text-center">
-          <h1 class="mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl">
-            Discover blog insights to aid your <br /><span class="text-primary">programming journey</span>
+        <div className="pt-72 px-6 xl:pt-72 2xl:pt-80 text-center">
+          <h1 className="mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl">
+            Discover blog insights to aid your <br /><span className="text-primary">programming journey</span>
           </h1>
           <a
             data-te-ripple-init data-te-ripple-color="light"
@@ -301,7 +306,7 @@ export default function Home() {
             target="_blank"
           >
             <button
-              class={`${colors[colorIndex][4]} ${colors[colorIndex][5]} border ${colors[colorIndex][2]} ${colors[colorIndex][6]} hover:bg-transparent mb-2 inline-block  px-12 pt-4 pb-3.5 text-sm font-medium uppercase leading-normal md:mr-2 md:mb-0 transition duration-300 ease-in-out `}
+              className={`${colors[colorIndex][4]} ${colors[colorIndex][5]} border ${colors[colorIndex][2]} ${colors[colorIndex][6]} hover:bg-transparent mb-2 inline-block  px-12 pt-4 pb-3.5 text-sm font-medium uppercase leading-normal md:mr-2 md:mb-0 transition duration-300 ease-in-out `}
             >
               Start Reading
             </button>
@@ -315,7 +320,7 @@ export default function Home() {
       </div >
 
       <section id="about-me" className="min-h-screen">
-        <div className="mx-10 mt-10 flex justify-end"><h2 className={`text-3xl font-normal text-gray-900 ${assistant.className}`}>About me</h2></div>
+        <div className="mx-5 md:mx-10 mt-10 flex justify-end"><h2 className={`text-3xl font-normal text-gray-900 ${assistant.className}`}>About me</h2></div>
         <div className="relative items-center w-full px-5 pt-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
           <div className="gap-12 lg:grid-cols-2 lg:grid">
             <div>
@@ -362,7 +367,7 @@ export default function Home() {
 
           // '2xl': '1536px', */}
           {/* <div
-            class="absolute md:left-20 xl:left-[3rem] 2xl:left-0 lg:top-[32rem] xl:top-3/4  mt-8 lg:mt-10 transform -translate-y-1/2 w-8 h-24 text-white flex items-center justify-center"
+            className="absolute md:left-20 xl:left-[3rem] 2xl:left-0 lg:top-[32rem] xl:top-3/4  mt-8 lg:mt-10 transform -translate-y-1/2 w-8 h-24 text-white flex items-center justify-center"
           >
             <div className="w-56 hidden ... bg-slate-300 border border-slate-500 rounded-r-full p-4 lg:flex items-center justify-center ...">
               <span className="mr-12 font-medium text-left	w-16 text-black">
@@ -383,7 +388,7 @@ export default function Home() {
 
 
       <section id="works" className="relative min-h-screen bg-cover border-t border-zinc-100 border-zinc-700/40 bg-slate-200 bg-no-repeat bg-fixed bg-center ">
-        <div className="mx-10 mt-12"><h2 className={`text-3xl font-normal text-gray-900 ${assistant.className}`}>Latest Projects</h2></div>
+        <div className="mx-5 md:mx-10 mt-12"><h2 className={`text-3xl font-normal text-gray-900 ${assistant.className}`}>Latest Projects</h2></div>
         <div className="relative mx-auto w-full max-w-7xl items-center px-5 py-12 md:px-12">
           <ol className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3" role="list">
             <li className="lgcol-span-2">
@@ -435,36 +440,117 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="skills" className="border-t pb-12 border-zinc-100 border-zinc-700/40">
+        <div className="mx-5 md:mx-10 mt-12"><h2 className={`text-3xl font-normal text-slate-900 ${assistant.className}`}>Tech Stack </h2></div>
+        <div className="items-center w-full px-5 py-10 sm:py-12 md:pt-24 md:pb-20  mx-auto md:px-12 lg:px-16 max-w-7xl">
+          <div>
+            <div className="max-w-2xl">
+              <p className="text-2xl font-medium tracking-tight text-slate-950 sm:text-4xl">
+                Versatile Full-Stack Developer with a Passion for Python, React, Node.js, and Next.js
+              </p>
+              <p className="max-w-2xl mt-4 text-lg tracking-tight text-slate-900">
+                I take pride in paying close attention to details, finding effective ways to organize code, and working collaboratively in teams. Through experiences with diverse individuals and various tech stacks, I've developed adaptability and a commitment to contributing to successful project outcomes.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className={`pointer-events-none font-serif relative flex gap-10 overflow-hidden border-y border-slate-800 py-5 text-white ${inter.className}`}>
+          <div className="flex min-w-full shrink-0 animate-marquee items-center justify-around gap-10">
+            <div className="flex items-center justify-center rounded-2xl aspect-square w-28 bg-slate-900 transition-all  hover:bg-white">
+              <FaLinux size={50} />
+            </div>
+            <div className="flex items-center justify-center rounded-2xl aspect-square w-28 bg-slate-900 transition-all  hover:bg-white">
+              <FaReact size={50} />
+            </div>
+            <div className="flex items-center justify-center rounded-2xl aspect-square w-28 bg-slate-900 transition-all  hover:bg-white">
+              <FaPython size={50} />
+            </div>
+            <div className="flex items-center justify-center rounded-2xl aspect-square w-28 bg-slate-900 transition-all  hover:bg-white">
+              <FaDocker size={50} />
+            </div>
+            <div className="flex items-center justify-center rounded-2xl aspect-square w-28 bg-slate-900 transition-all  hover:bg-white">
+              <SiFlask size={50} />
+            </div>
+            <div className="flex items-center justify-center rounded-2xl aspect-square w-28 bg-slate-900 transition-all  hover:bg-white">
+              <SiMysql size={50} />
+            </div>
+          </div>
+          <div aria-hidden="true" className="flex min-w-full shrink-0 animate-marquee items-center justify-around gap-10 text-white">
+            <div className="flex items-center justify-center rounded-2xl aspect-square w-28 bg-slate-900 transition-all  hover:bg-white">
+              <FaGithub size={50} />
+            </div>
+            <div className="flex items-center justify-center rounded-2xl aspect-square w-28 bg-slate-900 transition-all  hover:bg-white">
+              <FaFigma size={50} />
+            </div>
+            <div className="flex items-center justify-center rounded-2xl aspect-square w-28 bg-slate-900 transition-all  hover:bg-white">
+              <FaJava size={50} />
+            </div>
+            <div className="flex items-center justify-center rounded-2xl aspect-square w-28 bg-slate-900 transition-all  hover:bg-white">
+              <FaNodeJs size={50} />
+            </div>
+            <div className="flex items-center justify-center rounded-2xl aspect-square w-28 bg-slate-900 transition-all  hover:bg-white">
+              <TbBrandNextjs size={50} />
+            </div>
+            <div className="flex items-center justify-center rounded-2xl aspect-square w-28 bg-slate-900 transition-all  hover:bg-white">
+              <FaGit size={50} />
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* marquee */}
 
 
-      <section class="flex w-full" id="experience">
-        <div class={`pointer-events-none font-serif relative flex gap-10 overflow-hidden bg-slate-800 py-3 text-white ${inter.className}`}>
-          <div class="flex min-w-full shrink-0 animate-marquee items-center justify-around gap-10">
-            <span class="mx-4 text-4xl font-extrabold">Let&apos;s work together </span>
-            <span class="text-4xl font-extrabold"> · </span>
-            <span class="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
-            <span class="text-4xl font-extrabold"> · </span>
-            <span class="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
-            <span class="text-4xl font-extrabold"> · </span>
-            <span class="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
-            <span class="text-4xl font-extrabold"> · </span>
-            <span class="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
-            <span class="text-4xl font-extrabold"> · </span>
+      {/* <section className="flex w-full" id="experience">
+        <div className={`pointer-events-none font-serif relative flex gap-10 overflow-hidden bg-slate-800 py-3 text-white ${inter.className}`}>
+          <div className="flex min-w-full shrink-0 animate-marquee items-center justify-around gap-10">
+            <span className="mx-4 text-4xl font-extrabold">Let&apos;s work together </span>
+            <span className="text-4xl font-extrabold"> · </span>
+            <span className="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
+            <span className="text-4xl font-extrabold"> · </span>
+            <span className="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
+            <span className="text-4xl font-extrabold"> · </span>
+            <span className="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
+            <span className="text-4xl font-extrabold"> · </span>
+            <span className="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
+            <span className="text-4xl font-extrabold"> · </span>
           </div>
-          <div aria-hidden="true" class="flex min-w-full shrink-0 animate-marquee items-center justify-around gap-10 text-white">
-            <span class="mx-4 text-4xl font-extrabold">Let&apos;s work together </span>
-            <span class="text-4xl font-extrabold"> · </span>
-            <span class="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
-            <span class="text-4xl font-extrabold"> · </span>
-            <span class="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
-            <span class="text-4xl font-extrabold"> · </span>
-            <span class="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
-            <span class="text-4xl font-extrabold"> · </span>
-            <span class="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
-            <span class="text-4xl font-extrabold"> · </span>
+          <div aria-hidden="true" className="flex min-w-full shrink-0 animate-marquee items-center justify-around gap-10 text-white">
+            <span className="mx-4 text-4xl font-extrabold">Let&apos;s work together </span>
+            <span className="text-4xl font-extrabold"> · </span>
+            <span className="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
+            <span className="text-4xl font-extrabold"> · </span>
+            <span className="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
+            <span className="text-4xl font-extrabold"> · </span>
+            <span className="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
+            <span className="text-4xl font-extrabold"> · </span>
+            <span className="mx-4 text-4xl font-extrabold"> Let&apos;s work together </span>
+            <span className="text-4xl font-extrabold"> · </span>
           </div>
+        </div>
+      </section> */}
+
+      <section>
+        <div className="w-full px-2 lg:px-20">
+          <section className="py-3">
+            <div className=" h-full overflow-hidden bg-slate-800">
+              <div className="h-full overflow-hidden">
+                <div className="p-10 text-center lg:px-20 lg:py-32">
+                  <div><p className="font-display text-3xl font-medium tracking-tighter text-white lg:text-7xl">Let's work together</p></div>
+                  <p className="mt-12">
+                    <a aria-label="#" className="group inline-flex items-center uppercase text-white duration-200 lg:text-2xl" href="mailto:pr17anshu@gmail.com"
+                    >Get in touch
+                      <span aria-hidden="true" className="ml-3"
+                      >
+                        <MdArrowForwardIos className="lg:mt-1 h-4 w-4 transform duration-200 group-hover:ml-6 lg:h-6 lg:w-6" size={20} />
+                      </span
+                      ></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
 
