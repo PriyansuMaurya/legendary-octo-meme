@@ -105,7 +105,7 @@ export default function Home() {
           <div className="flex justify-end md:flex-1">
             <div className="mx-2 my-6 hidden  md:flex">
               <a
-                href="https://priyansumaurya.github.io/public/Priyanshu_Maurya_Resume_01_08_2023.pdf"
+                href="https://priyansumaurya.github.io/public/24_08_2024_RESUME_Priyanshu_Maurya.pdf"
                 target="_blank"
               >
                 <button
@@ -212,7 +212,7 @@ export default function Home() {
                               className="absolute inset-y-0 -z-10 w-screen bg-slate-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100"></span
                             ></a>
                           <a className="group relative isolate -mx-6 bg-slate-900 px-6 py-7 md:py-8 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-slate-700 sm:even:pl-16"
-                            href="https://priyansumaurya.github.io/public/Priyanshu_Maurya_Resume_01_08_2023.pdf"
+                            href="https://priyansumaurya.github.io/public/24_08_2024_RESUME_Priyanshu_Maurya.pdf"
                             target="_blank"
                             onClick={() => setNavHidden('-translate-y-[180%]')}>
                             Resume
